@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SulphurUI — Commands &amp; Reference</title>
+<link rel="icon" type="image/png" href="favicon-sui.png">
+<link rel="stylesheet" href="styles.css?v=18">
+</head>
+<body>
+
+<nav class="topnav">
+  <div class="inner">
+    <a class="brand" href="index.html"><img src="sui-mark-96.png" alt="" class="brand-mark">Sulphur<em>UI</em></a>
+    <div class="links">
+      <a href="index.html">Home</a>
+      <a href="index.html#modules">Modules</a>
+      <a href="gra.html" class="active">Commands</a>
+      <a class="nav-cta" href="https://addons.wago.io/addons/sulphurs-gra" target="_blank" rel="noopener">Get SulphurUI</a>
+    </div>
+  </div>
+</nav>
+
+<div class="wrap">
+
+  <header class="page-head">
+    <div class="eyebrow">Siege of Orgrimmar · Addon</div>
+    <h1>Sulphur<em>UI</em></h1>
+    <p class="dek">SulphurUI is one themed addon window (<code>/sui</code>) with a shared look, and optional modules you turn on as you need them. <b>Sulphur GRA</b> — the Guild Raid Assistant — is the first and largest of those modules: four shared, draggable anchor frames that other elements can attach to (move one, everything on it moves together), a floating Console output box, and a full set of <code>/</code> commands. This page covers the GRA module in detail.</p>
+    <div class="meta-row">
+      <span>Hosted on <a href="https://addons.wago.io/addons/sulphurs-gra" target="_blank" rel="noopener">Wago Addons</a></span>
+      <span>Current version <a href="https://addons.wago.io/addons/sulphurs-gra" target="_blank" rel="noopener"><b>v0.109.0</b></a></span>
+    </div>
+  </header>
+
+  <section class="block">
+    <h2>Get it in-game</h2>
+    <ol class="import-steps">
+      <li>Grab the latest release from the <a href="https://addons.wago.io/addons/sulphurs-gra" target="_blank" rel="noopener">Wago Addons page</a> (or install it automatically via the <a href="https://addons.wago.io/" target="_blank" rel="noopener">Wago desktop app</a>, which also keeps it updated).</li>
+      <li>If installing manually: unzip the download so you end up with a <code>SulphurGRA</code> folder directly inside your <code>Interface\AddOns</code> folder.</li>
+      <li>If WoW is already running, log out to the character-select screen so it picks up the new addon, then make sure it's enabled in your AddOns list.</li>
+    </ol>
+  </section>
+
+  <section class="block">
+    <h2>Commands</h2>
+    <div class="cmd-table-wrap">
+      <table class="cmd-table">
+        <thead><tr><th>Command</th><th>What it does</th></tr></thead>
+        <tbody>
+          <tr>
+            <td><code class="cmd-code">/sui</code></td>
+            <td>Opens the main window on its Welcome tab — the front door to everything the addon does. <code>/sulphurui</code> is the same command spelled out.</td>
+          </tr>
+          <tr>
+            <td><code class="cmd-code">/ssettings</code></td>
+            <td>Jumps straight to Settings — the cogwheel at the bottom of the sidebar, where the UI theme and window size live. <code>/sui settings</code> does the same thing.</td>
+          </tr>
+          <tr>
+            <td><code class="cmd-code">/sgra anchor</code></td>
+            <td>Shows all four anchor frames (small purple boxes) so you can click-and-drag each wherever you want anchored content placed on screen.</td>
+          </tr>
+          <tr>
+            <td><code class="cmd-code">/sgra hide</code></td>
+            <td>Hides the anchor frames again once you're happy with their placement. Position is saved automatically and persists across sessions — you only need to do this once.</td>
+          </tr>
+          <tr>
+            <td><code class="cmd-code">/sgra</code></td>
+            <td>Opens the GRA section of the sidebar. GRA is a heading above Hero Plan, BiS and Storage, so a bare <code>/sgra</code> lands on the first of those, Hero Plan. Use <code>/sui</code> for the addon's home tab.</td>
+          </tr>
+          <tr>
+            <td><code class="cmd-code">/shelp</code></td>
+            <td>Opens the Help tab — the full in-app command reference covering every part of the addon, without needing to alt-tab to this site mid-raid. <code>/sgra help</code> lands here too.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <footer class="sitefoot">
+    <div class="foot-cols">
+      <div class="foot-brand">
+        <img src="sui-mark-96.png" alt="">
+        <div><b>Sulphur Addons</b><p>SulphurUI, built by Sulphur_Dev. Not affiliated with Blizzard Entertainment.</p></div>
+      </div>
+      <div class="foot-col"><h4>Get it</h4><a href="https://addons.wago.io/addons/sulphurs-gra" target="_blank" rel="noopener">SulphurUI on Wago</a><a href="gra.html">Install &amp; commands</a><a href="https://github.com/sulphurthreads/sulphur-addons" target="_blank" rel="noopener">GitHub</a></div>
+      <div class="foot-col"><h4>Explore</h4><a href="index.html#modules">Modules</a><a href="gra.html">Commands</a></div>
+    </div>
+  </footer>
+
+</div>
+
+<script src="script.js?v=18"></script>
+</body>
+</html>
