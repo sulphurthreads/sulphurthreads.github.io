@@ -6,7 +6,7 @@
 <title>Report a bug or suggest — SulphurUI</title>
 <meta name="description" content="Send a SulphurUI bug report with your Debugger log, or a suggestion, to Sulphur_Dev.">
 <link rel="icon" type="image/png" href="favicon-sui.png">
-<link rel="stylesheet" href="styles.css?v=22">
+<link rel="stylesheet" href="styles.css?v=23">
 </head>
 <body>
 
@@ -32,38 +32,43 @@
       <p class="sub">Reports go straight to Sulphur_Dev. For a bug, the Debugger log is the most useful thing you can send.</p>
     </div>
 
+    <div class="rp-card">
     <form class="rp-form" id="rp" novalidate>
-      <div class="showcase-tabs rp-toggle" role="radiogroup" aria-label="Report type">
-        <button type="button" role="tab" data-type="bug" aria-selected="true">Bug report</button>
-        <button type="button" role="tab" data-type="suggestion" aria-selected="false">Suggestion</button>
+      <div class="rp-seg" role="radiogroup" aria-label="Report type">
+        <button type="button" role="radio" data-type="bug" aria-checked="true">Bug report</button>
+        <button type="button" role="radio" data-type="suggestion" aria-checked="false">Suggestion</button>
       </div>
 
       <div class="rp-row">
-        <label>Character name *<input name="character" required maxlength="64" autocomplete="off"></label>
-        <label data-only="bug">Realm<input name="realm" maxlength="64" autocomplete="off"></label>
+        <label class="rp-field"><span class="rp-lab">Character name<span class="rp-req">*</span></span><input name="character" required maxlength="64" autocomplete="off"></label>
+        <label class="rp-field" data-only="bug"><span class="rp-lab">Realm <span class="rp-opt">(optional)</span></span><input name="realm" maxlength="64" autocomplete="off"></label>
       </div>
       <div class="rp-row">
-        <label>SulphurUI version *<input name="version" required maxlength="32" value="0.113.0"></label>
-        <label>Game client
+        <label class="rp-field"><span class="rp-lab">SulphurUI version<span class="rp-req">*</span></span><input name="version" required maxlength="32" value="0.113.0"></label>
+        <label class="rp-field"><span class="rp-lab">Game client</span>
           <select name="client">
             <option>WoW Forever</option><option>Retail</option><option>MoP Classic</option><option>Classic Era</option>
           </select>
         </label>
       </div>
-      <label data-only="bug">Date &amp; time of the issue<input type="datetime-local" name="issue_time"></label>
-      <label data-only="bug">What were you doing?<textarea name="doing" maxlength="4000"></textarea></label>
-      <label data-only="bug">What went wrong? *<textarea name="issue" maxlength="4000"></textarea></label>
-      <label data-only="bug">Debugger log
-        <span class="rp-hint">In game: type <code>/sui</code> → Debugger → Copy, then paste here. Up to about 200 KB.</span>
+      <label class="rp-field" data-only="bug"><span class="rp-lab">Date &amp; time of the issue</span><input type="datetime-local" name="issue_time"></label>
+      <label class="rp-field" data-only="bug"><span class="rp-lab">What were you doing?</span><textarea name="doing" maxlength="4000"></textarea></label>
+      <label class="rp-field" data-only="bug"><span class="rp-lab">What went wrong?<span class="rp-req">*</span></span><textarea name="issue" maxlength="4000"></textarea></label>
+      <label class="rp-field" data-only="bug"><span class="rp-lab">Debugger log</span>
+        <span class="rp-hint">In game: type <code>/sui</code> → Debugger → Copy, then paste here. Up to 250 KB.</span>
         <textarea name="log" class="rp-log" spellcheck="false" maxlength="250000"></textarea>
-        <span class="rp-hint" id="rp-count">0 characters</span>
+        <span class="rp-meter" id="rp-meter"><span class="bar"><i id="rp-bar"></i></span><span id="rp-count">0 characters</span></span>
       </label>
-      <label data-only="suggestion" hidden>Your suggestion *<textarea name="suggestion" maxlength="4000"></textarea></label>
-      <label>Contact (optional, Discord or BattleTag)<input name="contact" maxlength="128" autocomplete="off"></label>
+      <label class="rp-field" data-only="suggestion" hidden><span class="rp-lab">Your suggestion<span class="rp-req">*</span></span><textarea name="suggestion" maxlength="4000"></textarea></label>
+      <label class="rp-field"><span class="rp-lab">Contact <span class="rp-opt">(optional, Discord or BattleTag)</span></span><input name="contact" maxlength="128" autocomplete="off"></label>
       <div class="rp-hp" aria-hidden="true"><label>Leave empty<input name="website" tabindex="-1" autocomplete="off"></label></div>
-      <button class="btn btn-primary" type="submit">Send</button>
+      <div class="rp-actions">
+        <button class="btn btn-primary" type="submit">Send report</button>
+        <span class="rp-hint"><span class="rp-req">*</span> required</span>
+      </div>
       <div class="rp-status" id="rp-status" role="status" hidden></div>
     </form>
+    </div>
   </section>
 
   <footer class="sitefoot">
@@ -79,6 +84,6 @@
   </footer>
 </div>
 
-<script src="report.js?v=1"></script>
+<script src="report.js?v=2"></script>
 </body>
 </html>

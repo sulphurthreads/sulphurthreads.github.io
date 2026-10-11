@@ -4,129 +4,110 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
-<title>Reports admin — SulphurUI</title>
-<link rel="stylesheet" href="../styles.css?v=22">
-<style>
-  .ad-bar { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; margin-bottom: 14px; }
-  .ad-bar select, .ad-bar button { padding: 8px 10px; background: var(--surface); color: var(--ink); border: 1px solid var(--line); border-radius: 8px; }
-  .ad-counts { font-size: 13px; color: var(--ink-soft); margin-bottom: 12px; overflow-wrap: anywhere; }
-  .ad-list { display: grid; gap: 8px; }
-  .ad-item { padding: 10px 12px; border: 1px solid var(--line); border-radius: 8px; background: var(--surface); cursor: pointer; min-width: 0; }
-  .ad-item b { color: var(--ink); } .ad-item small { color: var(--ink-faint); display: block; overflow-wrap: anywhere; }
-  .ad-view { margin-top: 18px; border: 1px solid var(--line); border-radius: 10px; padding: 14px; background: var(--surface); }
-  .ad-view dl { display: grid; grid-template-columns: max-content minmax(0, 1fr); gap: 4px 12px; font-size: 14px; }
-  .ad-view dd { margin: 0; overflow-wrap: anywhere; white-space: pre-wrap; }
-  .ad-log { max-height: 60vh; overflow: auto; background: #0d0d0c; padding: 12px; border-radius: 8px; font: 12px/1.5 var(--font-mono); white-space: pre-wrap; overflow-wrap: anywhere; }
-  .ad-signin { max-width: 380px; margin: 60px auto; border: 1px solid var(--line); border-radius: 10px; padding: 20px; background: var(--surface); }
-  .ad-signin form { display: grid; gap: 10px; }
-  .ad-signin input, .ad-signin button { padding: 9px 10px; background: var(--bg, #111); color: var(--ink); border: 1px solid var(--line); border-radius: 8px; }
-  .ad-signin button { cursor: pointer; }
-  .ad-err { color: #e66; margin: 0; }
-</style>
+<title>Reports Admin — SulphurUI</title>
+<link rel="icon" type="image/png" href="../favicon-sui.png">
+<link rel="stylesheet" href="../styles.css?v=23">
+<link rel="stylesheet" href="admin.css?v=1">
 </head>
 <body>
-<div class="wrap">
-  <section class="block ad-signin" id="signin">
-    <h2>Reports admin</h2>
-    <form id="signin-form" autocomplete="off">
-      <label for="key">Admin key</label>
-      <input id="key" type="password" autocomplete="current-password" required>
-      <button type="submit">Sign in</button>
+
+<section class="ad-signin" id="signin">
+  <div class="ad-card">
+    <img class="logo" src="../sui-logo.png" alt="SulphurUI">
+    <h1>Reports admin</h1>
+    <p class="sub">Sign in with the admin key.</p>
+    <form id="signin-form" autocomplete="off" novalidate>
+      <label class="ad-label" for="key">Admin key</label>
+      <input class="ad-input" id="key" type="password" autocomplete="current-password" required>
       <p class="ad-err" id="signin-err" hidden></p>
+      <button class="ad-btn ad-btn-primary" type="submit">Sign in</button>
     </form>
-  </section>
-  <section class="block" id="panel" hidden>
-    <h2>Reports</h2>
-    <div class="ad-bar">
-      <select id="f-type"><option value="">All types</option><option>bug</option><option>suggestion</option></select>
-      <select id="f-status"><option value="">All statuses</option><option>new</option><option>seen</option><option>fixed</option><option>wontfix</option></select>
-      <select id="f-version"><option value="">All versions</option></select>
-      <button id="reload" type="button">Refresh</button>
-      <button id="signout" type="button">Sign out</button>
+    <p class="foot">Sulphur Addons · built by Sulphur_Dev</p>
+  </div>
+</section>
+
+<div id="panel" hidden>
+  <header class="ad-top">
+    <div class="inner">
+      <a class="ad-brand" href="../index.html"><img src="../sulphur-logo-96.png" alt="">Sulphur<em>UI</em></a>
+      <span class="ad-crumb">Reports</span>
+      <span class="spacer"></span>
+      <button class="ad-btn" id="signout" type="button">Sign out</button>
     </div>
-    <div class="ad-counts" id="counts"></div>
-    <div class="ad-list" id="list"></div>
-    <div class="ad-view" id="view" hidden></div>
-  </section>
+  </header>
+
+  <main class="ad-main">
+    <div class="ad-head">
+      <h2>Reports</h2>
+      <p>Bug reports and suggestions sent from the report page.</p>
+    </div>
+
+    <div class="ad-stats" id="stats">
+      <div class="ad-stat accent"><div class="n" data-stat="total">–</div><div class="l">Total</div></div>
+      <div class="ad-stat"><div class="n" data-stat="new">–</div><div class="l">New</div></div>
+      <div class="ad-stat"><div class="n" data-stat="seen">–</div><div class="l">Seen</div></div>
+      <div class="ad-stat"><div class="n" data-stat="fixed">–</div><div class="l">Fixed</div></div>
+      <div class="ad-stat bug"><div class="n" data-stat="bug">–</div><div class="l">Bugs</div></div>
+      <div class="ad-stat"><div class="n" data-stat="suggestion">–</div><div class="l">Suggestions</div></div>
+    </div>
+
+    <div class="ad-filters">
+      <div class="ad-seg" role="group" aria-label="Type" data-filter="type">
+        <button class="ad-chip" type="button" data-v="" aria-pressed="true">All</button>
+        <button class="ad-chip" type="button" data-v="bug" aria-pressed="false">Bugs</button>
+        <button class="ad-chip" type="button" data-v="suggestion" aria-pressed="false">Suggestions</button>
+      </div>
+      <div class="ad-seg" role="group" aria-label="Status" data-filter="status">
+        <button class="ad-chip" type="button" data-v="" aria-pressed="true">All</button>
+        <button class="ad-chip" type="button" data-v="new" aria-pressed="false">New</button>
+        <button class="ad-chip" type="button" data-v="seen" aria-pressed="false">Seen</button>
+        <button class="ad-chip" type="button" data-v="fixed" aria-pressed="false">Fixed</button>
+        <button class="ad-chip" type="button" data-v="wontfix" aria-pressed="false">Won't fix</button>
+      </div>
+      <select class="ad-select" id="f-version" aria-label="Version"><option value="">All versions</option></select>
+      <div class="ad-search">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+        <input class="ad-input" id="q" type="search" placeholder="Search character, issue, suggestion" aria-label="Search">
+      </div>
+      <button class="ad-btn ad-icon-btn" id="reload" type="button" aria-label="Refresh" title="Refresh">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 1 1-2.6-6.4"/><path d="M21 4v5h-5"/></svg>
+      </button>
+    </div>
+
+    <div class="ad-list" id="list" aria-live="polite"></div>
+
+    <footer class="ad-foot">Sulphur Addons · SulphurUI, built by Sulphur_Dev</footer>
+  </main>
 </div>
-<script>
-(function () {
-  var $ = function (id) { return document.getElementById(id); };
-  function esc(s) { return String(s == null ? "" : s).replace(/[&<>"]/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]; }); }
-  var STORE = "sulphurAdminKey", adminKey = "";
-  try { adminKey = localStorage.getItem(STORE) || ""; } catch (e) {}
-  function req(path, opts, key) {
-    opts = Object.assign({}, opts || {});
-    opts.headers = Object.assign({}, opts.headers || {}, { Authorization: "Bearer " + key });
-    return fetch("/api/admin/" + path, opts);
-  }
-  function api(path, opts) {
-    return req(path, opts, adminKey).then(function (r) {
-      if (r.status === 403) { signOut(); throw new Error("Signed out (key rejected)"); }
-      if (!r.ok) throw new Error("HTTP " + r.status);
-      return r.json();
-    });
-  }
-  function showPanel(on) { $("panel").hidden = !on; $("signin").hidden = on; }
-  function signOut() {
-    adminKey = "";
-    try { localStorage.removeItem(STORE); } catch (e) {}
-    $("view").hidden = true; $("list").innerHTML = ""; $("counts").textContent = "";
-    showPanel(false);
-  }
-  function load() {
-    var q = new URLSearchParams();
-    ["type", "status", "version"].forEach(function (k) { var v = $("f-" + k).value; if (v) q.set(k, v); });
-    api("reports?" + q).then(function (d) {
-      $("counts").textContent = d.counts.map(function (c) { return c.type + "/" + c.status + ": " + c.n; }).join("  ·  ") || "No reports yet.";
-      var vs = $("f-version"), cur = vs.value;
-      vs.innerHTML = '<option value="">All versions</option>' + d.versions.map(function (v) { return "<option>" + esc(v) + "</option>"; }).join("");
-      vs.value = cur;
-      $("list").innerHTML = d.rows.map(function (r) {
-        return '<div class="ad-item" data-id="' + esc(r.id) + '"><b>[' + esc(r.status) + "] " + esc(r.type) + " · " + esc(r.character) +
-          (r.realm ? "-" + esc(r.realm) : "") + "</b> v" + esc(r.version) + " · " + esc(r.client || "") +
-          "<small>" + esc(r.created_at) + (r.log_len ? " · log " + r.log_len + " chars" : "") + " — " + esc(r.summary) + "</small></div>";
-      }).join("") || "<p>Nothing matches.</p>";
-    }).catch(function (e) { $("counts").textContent = e.message; });
-  }
-  function open(id) {
-    api("reports/" + encodeURIComponent(id)).then(function (r) {
-      var v = $("view"); v.hidden = false;
-      var rows = ["type", "status", "created_at", "character", "realm", "issue_time", "version", "client", "contact", "doing", "issue", "suggestion"]
-        .filter(function (k) { return r[k]; }).map(function (k) { return "<dt>" + k + "</dt><dd>" + esc(r[k]) + "</dd>"; }).join("");
-      v.innerHTML = "<dl>" + rows + "</dl>" +
-        '<div class="ad-bar" style="margin-top:12px">' +
-        ["new", "seen", "fixed", "wontfix"].map(function (s) { return '<button type="button" data-st="' + s + '">Mark ' + s + "</button>"; }).join("") +
-        '<button type="button" id="copy">Copy log</button><button type="button" id="del">Delete</button></div>' +
-        (r.log ? '<pre class="ad-log" id="log"></pre>' : "<p>No log attached.</p>");
-      if (r.log) $("log").textContent = r.log;
-      v.querySelectorAll("[data-st]").forEach(function (b) {
-        b.onclick = function () { api("reports/" + encodeURIComponent(id), { method: "PATCH", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ status: b.dataset.st }) }).then(function () { load(); open(id); }); };
-      });
-      $("copy").onclick = function () { navigator.clipboard.writeText(r.log || ""); };
-      $("del").onclick = function () { if (confirm("Delete this report?")) api("reports/" + encodeURIComponent(id), { method: "DELETE" }).then(function () { v.hidden = true; load(); }); };
-    }).catch(function (e) { alert(e.message); });
-  }
-  $("list").addEventListener("click", function (e) { var it = e.target.closest(".ad-item"); if (it) open(it.dataset.id); });
-  ["f-type", "f-status", "f-version"].forEach(function (id) { $(id).onchange = load; });
-  $("reload").onclick = load;
-  $("signout").onclick = signOut;
-  $("signin-form").onsubmit = function (e) {
-    e.preventDefault();
-    var k = $("key").value.trim(), err = $("signin-err"), btn = e.target.querySelector("button");
-    if (!k) return;
-    err.hidden = true; btn.disabled = true;
-    req("reports", null, k).then(function (r) {
-      btn.disabled = false;
-      if (r.status === 200) {
-        adminKey = k; $("key").value = "";
-        try { localStorage.setItem(STORE, k); } catch (x) {}
-        showPanel(true); load();
-      } else { err.textContent = r.status === 403 ? "Wrong key" : "HTTP " + r.status; err.hidden = false; }
-    }).catch(function (x) { btn.disabled = false; err.textContent = x.message; err.hidden = false; });
-  };
-  if (adminKey) { showPanel(true); load(); } else showPanel(false);
-})();
-</script>
+
+<div class="ad-scrim" id="scrim"></div>
+<aside class="ad-drawer" id="drawer" aria-label="Report detail" role="dialog" aria-modal="true">
+  <div class="ad-dhead">
+    <h3 id="d-title">Report</h3>
+    <button class="ad-btn ad-icon-btn" id="d-close" type="button" aria-label="Close">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6 6 18"/></svg>
+    </button>
+  </div>
+  <div class="ad-dbody" id="d-body"></div>
+  <div class="ad-dfoot">
+    <div class="ad-actions" id="d-status"></div>
+    <button class="ad-btn ad-btn-danger" id="d-del" type="button">Delete</button>
+  </div>
+</aside>
+
+<div class="ad-modal" id="confirm" hidden>
+  <div class="ad-card" role="alertdialog" aria-labelledby="c-title">
+    <h3 id="c-title">Delete this report?</h3>
+    <p>This permanently removes the report and its log. It cannot be undone.</p>
+    <div class="ad-actions">
+      <button class="ad-btn" id="c-no" type="button">Cancel</button>
+      <button class="ad-btn ad-btn-danger" id="c-yes" type="button">Delete</button>
+    </div>
+  </div>
+</div>
+
+<div class="ad-toast" id="toast" role="status"></div>
+
+<script src="admin.js?v=1"></script>
 </body>
 </html>
