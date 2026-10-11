@@ -17,17 +17,32 @@
   .ad-view dl { display: grid; grid-template-columns: max-content minmax(0, 1fr); gap: 4px 12px; font-size: 14px; }
   .ad-view dd { margin: 0; overflow-wrap: anywhere; white-space: pre-wrap; }
   .ad-log { max-height: 60vh; overflow: auto; background: #0d0d0c; padding: 12px; border-radius: 8px; font: 12px/1.5 var(--font-mono); white-space: pre-wrap; overflow-wrap: anywhere; }
+  .ad-signin { max-width: 380px; margin: 60px auto; border: 1px solid var(--line); border-radius: 10px; padding: 20px; background: var(--surface); }
+  .ad-signin form { display: grid; gap: 10px; }
+  .ad-signin input, .ad-signin button { padding: 9px 10px; background: var(--bg, #111); color: var(--ink); border: 1px solid var(--line); border-radius: 8px; }
+  .ad-signin button { cursor: pointer; }
+  .ad-err { color: #e66; margin: 0; }
 </style>
 </head>
 <body>
 <div class="wrap">
-  <section class="block">
+  <section class="block ad-signin" id="signin">
+    <h2>Reports admin</h2>
+    <form id="signin-form" autocomplete="off">
+      <label for="key">Admin key</label>
+      <input id="key" type="password" autocomplete="current-password" required>
+      <button type="submit">Sign in</button>
+      <p class="ad-err" id="signin-err" hidden></p>
+    </form>
+  </section>
+  <section class="block" id="panel" hidden>
     <h2>Reports</h2>
     <div class="ad-bar">
       <select id="f-type"><option value="">All types</option><option>bug</option><option>suggestion</option></select>
       <select id="f-status"><option value="">All statuses</option><option>new</option><option>seen</option><option>fixed</option><option>wontfix</option></select>
       <select id="f-version"><option value="">All versions</option></select>
       <button id="reload" type="button">Refresh</button>
+      <button id="signout" type="button">Sign out</button>
     </div>
     <div class="ad-counts" id="counts"></div>
     <div class="ad-list" id="list"></div>
@@ -38,11 +53,26 @@
 (function () {
   var $ = function (id) { return document.getElementById(id); };
   function esc(s) { return String(s == null ? "" : s).replace(/[&<>"]/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]; }); }
+  var STORE = "sulphurAdminKey", adminKey = "";
+  try { adminKey = localStorage.getItem(STORE) || ""; } catch (e) {}
+  function req(path, opts, key) {
+    opts = Object.assign({}, opts || {});
+    opts.headers = Object.assign({}, opts.headers || {}, { Authorization: "Bearer " + key });
+    return fetch("/api/admin/" + path, opts);
+  }
   function api(path, opts) {
-    return fetch("/api/admin/" + path, Object.assign({ credentials: "same-origin" }, opts || {})).then(function (r) {
-      if (!r.ok) throw new Error("HTTP " + r.status + (r.status === 403 ? " (not signed in through Cloudflare Access)" : ""));
+    return req(path, opts, adminKey).then(function (r) {
+      if (r.status === 403) { signOut(); throw new Error("Signed out (key rejected)"); }
+      if (!r.ok) throw new Error("HTTP " + r.status);
       return r.json();
     });
+  }
+  function showPanel(on) { $("panel").hidden = !on; $("signin").hidden = on; }
+  function signOut() {
+    adminKey = "";
+    try { localStorage.removeItem(STORE); } catch (e) {}
+    $("view").hidden = true; $("list").innerHTML = ""; $("counts").textContent = "";
+    showPanel(false);
   }
   function load() {
     var q = new URLSearchParams();
@@ -80,7 +110,22 @@
   $("list").addEventListener("click", function (e) { var it = e.target.closest(".ad-item"); if (it) open(it.dataset.id); });
   ["f-type", "f-status", "f-version"].forEach(function (id) { $(id).onchange = load; });
   $("reload").onclick = load;
-  load();
+  $("signout").onclick = signOut;
+  $("signin-form").onsubmit = function (e) {
+    e.preventDefault();
+    var k = $("key").value.trim(), err = $("signin-err"), btn = e.target.querySelector("button");
+    if (!k) return;
+    err.hidden = true; btn.disabled = true;
+    req("reports", null, k).then(function (r) {
+      btn.disabled = false;
+      if (r.status === 200) {
+        adminKey = k; $("key").value = "";
+        try { localStorage.setItem(STORE, k); } catch (x) {}
+        showPanel(true); load();
+      } else { err.textContent = r.status === 403 ? "Wrong key" : "HTTP " + r.status; err.hidden = false; }
+    }).catch(function (x) { btn.disabled = false; err.textContent = x.message; err.hidden = false; });
+  };
+  if (adminKey) { showPanel(true); load(); } else showPanel(false);
 })();
 </script>
 </body>
