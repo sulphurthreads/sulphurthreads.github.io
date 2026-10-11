@@ -815,3 +815,10 @@ a.module-card:hover { text-decoration: none; }
 .rp-status.bad { border-color: var(--bad); background: var(--bad-wash); color: var(--bad); }
 .rp-status b { display: block; color: var(--ink); margin-bottom: 2px; }
 .rp-status code { font-family: var(--font-mono); font-size: 12.5px; overflow-wrap: anywhere; }
+
+/* Download pair: Wago + CurseForge, equal width, stacks on phone */
+.dl-pair { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; width: 100%; max-width: 420px; margin: 12px 0; }
+.dl-btn { justify-content: center; gap: 10px; }
+.dl-btn:focus-visible { outline: 2px solid var(--gold-strong); outline-offset: 3px; }
+.dl-glyph { flex: none; }
+@media (max-width: 520px) { .dl-pair { grid-template-columns: 1fr; max-width: none; } }
