@@ -762,21 +762,23 @@ a.module-card:hover { text-decoration: none; }
 .concept figcaption b { color: var(--ink); margin-right: 4px; }
 @media (max-width: 700px) { .concept-grid { grid-template-columns: minmax(0, 1fr); } }
 
-/* Real-code section (index.html #code) */
-.code-panel[hidden] { display: none; }
-.code-head { display: flex; justify-content: space-between; gap: 12px; padding: 10px 14px; background: var(--surface-soft); border: 1px solid var(--line); border-bottom: 0; border-radius: 10px 10px 0 0; font: 12px var(--font-mono); color: var(--ink-soft); }
-.code-lang { color: var(--gold); }
-.code-path { overflow-wrap: anywhere; }
-pre.code { margin: 0; padding: 16px; background: #0d0d0c; border: 1px solid var(--line); border-radius: 0 0 10px 10px; font: 12.5px/1.6 var(--font-mono); color: var(--ink); white-space: pre-wrap; overflow-wrap: anywhere; }
-pre.code .tk-c { color: var(--ink-faint); font-style: italic; }
-pre.code .tk-s { color: var(--green); }
-pre.code .tk-k { color: var(--gold); }
-pre.code .tk-n { color: #f0b36b; }
-.code-note { font-size: 14px; line-height: 1.6; color: var(--ink-soft); margin: 12px 0 0; }
-/* .code is also the inline chip class above; reset it for the block. */
-pre.code code { all: unset; white-space: inherit; font: inherit; }
-pre.code { white-space: pre-wrap; display: block; }
-
 /* New SulphurUI mark (tools/art/logo-concepts/SUI_Concept6_Master.png) */
 .brand-mark { border-radius: 0; box-shadow: none; object-fit: contain; }
 .hero-logo { display: block; width: clamp(140px, 18vw, 220px); height: auto; margin: 0 0 22px; filter: drop-shadow(0 0 24px rgba(31, 243, 82, 0.25)); }
+
+/* Report CTA (index.html) + report page */
+.report-cta { text-align: center; }
+.report-cta .sub { margin: 8px auto 18px; }
+.rp-form { max-width: 760px; margin: 0 auto; display: grid; gap: 16px; }
+.rp-form label { display: grid; gap: 6px; font-size: 14px; color: var(--ink-soft); min-width: 0; }
+.rp-form input, .rp-form select, .rp-form textarea { width: 100%; box-sizing: border-box; padding: 10px 12px; background: var(--surface); color: var(--ink); border: 1px solid var(--line); border-radius: 8px; font: 15px inherit; }
+.rp-form textarea { min-height: 110px; resize: vertical; }
+.rp-form textarea.rp-log { min-height: 280px; font: 12.5px/1.5 var(--font-mono); white-space: pre; overflow: auto; }
+.rp-row { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+@media (max-width: 640px) { .rp-row { grid-template-columns: minmax(0, 1fr); } }
+.rp-hint { font-size: 12.5px; color: var(--ink-faint); }
+.rp-hp { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
+.rp-status { padding: 12px 14px; border-radius: 8px; border: 1px solid var(--line); }
+.rp-status.ok { border-color: var(--green); color: var(--green); }
+.rp-status.bad { border-color: #e06c6c; color: #e06c6c; }
+.rp-toggle { justify-content: center; }

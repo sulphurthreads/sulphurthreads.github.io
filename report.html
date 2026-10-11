@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Report a bug or suggest — SulphurUI</title>
+<meta name="description" content="Send a SulphurUI bug report with your Debugger log, or a suggestion, to Sulphur_Dev.">
+<link rel="icon" type="image/png" href="favicon-sui.png">
+<link rel="stylesheet" href="styles.css?v=22">
+</head>
+<body>
+
+<nav class="topnav">
+  <div class="inner">
+    <a class="brand" href="index.html"><img src="sui-mark-96.png" alt="" class="brand-mark">Sulphur<em>UI</em></a>
+    <div class="links">
+      <a href="index.html">Home</a>
+      <a href="index.html#modules">Modules</a>
+      <a href="gra.html">Commands</a>
+      <a href="report.html" class="active">Report a bug</a>
+      <a class="nav-donate" href="https://buymeacoffee.com/sulphurworks" target="_blank" rel="noopener">&#9749; Support</a>
+      <a class="nav-cta" href="https://addons.wago.io/addons/sulphurs-gra" target="_blank" rel="noopener">Get SulphurUI</a>
+    </div>
+  </div>
+</nav>
+
+<div class="wrap">
+  <section class="block">
+    <div class="section-head">
+      <div class="eyebrow">Feedback</div>
+      <h2>Report a bug or suggest something.</h2>
+      <p class="sub">Reports go straight to Sulphur_Dev. For a bug, the Debugger log is the most useful thing you can send.</p>
+    </div>
+
+    <form class="rp-form" id="rp" novalidate>
+      <div class="showcase-tabs rp-toggle" role="radiogroup" aria-label="Report type">
+        <button type="button" role="tab" data-type="bug" aria-selected="true">Bug report</button>
+        <button type="button" role="tab" data-type="suggestion" aria-selected="false">Suggestion</button>
+      </div>
+
+      <div class="rp-row">
+        <label>Character name *<input name="character" required maxlength="64" autocomplete="off"></label>
+        <label data-only="bug">Realm<input name="realm" maxlength="64" autocomplete="off"></label>
+      </div>
+      <div class="rp-row">
+        <label>SulphurUI version *<input name="version" required maxlength="32" value="0.113.0"></label>
+        <label>Game client
+          <select name="client">
+            <option>WoW Forever</option><option>Retail</option><option>MoP Classic</option><option>Classic Era</option>
+          </select>
+        </label>
+      </div>
+      <label data-only="bug">Date &amp; time of the issue<input type="datetime-local" name="issue_time"></label>
+      <label data-only="bug">What were you doing?<textarea name="doing" maxlength="4000"></textarea></label>
+      <label data-only="bug">What went wrong? *<textarea name="issue" maxlength="4000"></textarea></label>
+      <label data-only="bug">Debugger log
+        <span class="rp-hint">In game: type <code>/sui</code> → Debugger → Copy, then paste here. Up to about 200 KB.</span>
+        <textarea name="log" class="rp-log" spellcheck="false" maxlength="250000"></textarea>
+        <span class="rp-hint" id="rp-count">0 characters</span>
+      </label>
+      <label data-only="suggestion" hidden>Your suggestion *<textarea name="suggestion" maxlength="4000"></textarea></label>
+      <label>Contact (optional, Discord or BattleTag)<input name="contact" maxlength="128" autocomplete="off"></label>
+      <div class="rp-hp" aria-hidden="true"><label>Leave empty<input name="website" tabindex="-1" autocomplete="off"></label></div>
+      <button class="btn btn-primary" type="submit">Send</button>
+      <div class="rp-status" id="rp-status" role="status" hidden></div>
+    </form>
+  </section>
+
+  <footer class="sitefoot">
+    <div class="foot-cols">
+      <div class="foot-brand">
+        <img src="sui-mark-96.png" alt="">
+        <div><b>Sulphur Addons</b><p>SulphurUI, built by Sulphur_Dev. Not affiliated with Blizzard Entertainment.</p></div>
+      </div>
+      <div class="foot-col"><h4>Get it</h4><a href="https://addons.wago.io/addons/sulphurs-gra" target="_blank" rel="noopener">SulphurUI on Wago</a><a href="gra.html">Install &amp; commands</a></div>
+      <div class="foot-col"><h4>Explore</h4><a href="index.html#modules">Modules</a><a href="gra.html">Commands</a><a href="report.html">Report a bug / suggest</a></div>
+      <div class="foot-col"><h4>Support</h4><a href="https://buymeacoffee.com/sulphurworks" target="_blank" rel="noopener">&#9749; Buy me a coffee</a></div>
+    </div>
+  </footer>
+</div>
+
+<script src="report.js?v=1"></script>
+</body>
+</html>
