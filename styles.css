@@ -181,7 +181,7 @@ h1 em {
 
 /* Sections */
 section.block {
-  margin-bottom: 48px;
+  margin-bottom: 64px;
 }
 
 section.block h2 {
@@ -699,7 +699,6 @@ nav.topnav .links a.nav-donate:hover { background: var(--gold); color: var(--bg)
 /* Section heads */
 .section-head { max-width: 720px; margin-bottom: 22px; }
 section.block .section-head h2 { font-size: clamp(26px, 3.2vw, 36px); line-height: 1.1; margin: 0 0 8px; }
-section.block { margin-bottom: 64px; }
 
 /* Module grid */
 .module-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 14px; }
@@ -820,7 +819,11 @@ a.module-card:hover { text-decoration: none; }
 .dl-pair { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; width: 100%; max-width: 420px; margin: 12px 0; }
 .dl-btn { justify-content: center; gap: 10px; }
 .dl-btn:focus-visible { outline: 2px solid var(--gold-strong); outline-offset: 3px; }
-.dl-glyph { flex: none; }
+.dl-glyph { flex: none; width: 1.3em; height: 1.3em; }
+.hero-ctas .btn, .dl-btn { min-height: 44px; }
+#features h3 { margin: 28px 0 10px; }
+#features ul { margin: 0; padding-left: 20px; line-height: 1.6; color: var(--ink-soft); }
+.gallery { max-width: 960px; margin-inline: auto; }
 @media (max-width: 520px) { .dl-pair { grid-template-columns: 1fr; max-width: none; } }
 
 .dl-latest { font-size: 13px; color: var(--ink-soft); margin: 8px 0 0; }
