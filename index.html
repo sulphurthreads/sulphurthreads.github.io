@@ -6,7 +6,7 @@
 <title>Sulphur Addons — SulphurUI</title>
 <meta name="description" content="SulphurUI: a modular WoW interface suite for Retail, MoP Classic, Classic Era and WoW Forever — twenty-eight module addons on one shell, one searchable settings panel and one layout grid.">
 <link rel="icon" type="image/png" href="favicon-sui.png">
-<link rel="stylesheet" href="styles.css?v=24">
+<link rel="stylesheet" href="styles.css?v=25">
 </head>
 <body>
 
@@ -50,6 +50,30 @@
     <div class="stat"><b>57</b><span>Blizzard window skin packs</span></div>
     <div class="stat"><b>1</b><span>settings panel, fully searchable</span></div>
   </div>
+
+  <section class="block" id="screenshots">
+    <div class="section-head"><div class="eyebrow">In-game</div><h2>Screenshots</h2></div>
+    <div class="gallery" data-gallery tabindex="0" aria-roledescription="carousel" aria-label="SulphurUI screenshots">
+      <div class="gal-stage">
+        <figure class="gal-slide"><img src="img/sui-layout-disc.png" alt="The new layout studio disc: pick a frame, type X and Y, toggle snapping." loading="eager" decoding="async"><figcaption>The new layout studio disc: pick a frame, type X and Y, toggle snapping.</figcaption></figure>
+        <figure class="gal-slide" hidden><img src="img/sui-home.png" alt="The /sui Home page: what's new and four quick actions." loading="lazy" decoding="async"><figcaption>The /sui Home page: what's new and four quick actions.</figcaption></figure>
+        <figure class="gal-slide" hidden><img src="img/sui-setup-welcome.png" alt="The setup wizard welcome page with quick-start profiles." loading="lazy" decoding="async"><figcaption>The setup wizard welcome page with quick-start profiles.</figcaption></figure>
+        <figure class="gal-slide" hidden><img src="img/sui-unitframes-setup.png" alt="The Unit Frames wizard with its live preview." loading="lazy" decoding="async"><figcaption>The Unit Frames wizard with its live preview.</figcaption></figure>
+        <figure class="gal-slide" hidden><img src="img/sui-nameplates-setup.png" alt="The Nameplates wizard preview showing the execute range." loading="lazy" decoding="async"><figcaption>The Nameplates wizard preview showing the execute range.</figcaption></figure>
+        <button class="gal-nav gal-prev" type="button" aria-label="Previous screenshot">&#8249;</button>
+        <button class="gal-nav gal-next" type="button" aria-label="Next screenshot">&#8250;</button>
+      </div>
+      <div class="gal-thumbs">
+      <button class="gal-thumb" type="button" aria-label="Show screenshot 1" aria-current="true"><img src="img/sui-layout-disc.png" alt="" loading="lazy"></button>
+      <button class="gal-thumb" type="button" aria-label="Show screenshot 2"><img src="img/sui-home.png" alt="" loading="lazy"></button>
+      <button class="gal-thumb" type="button" aria-label="Show screenshot 3"><img src="img/sui-setup-welcome.png" alt="" loading="lazy"></button>
+      <button class="gal-thumb" type="button" aria-label="Show screenshot 4"><img src="img/sui-unitframes-setup.png" alt="" loading="lazy"></button>
+      <button class="gal-thumb" type="button" aria-label="Show screenshot 5"><img src="img/sui-nameplates-setup.png" alt="" loading="lazy"></button>
+      </div>
+    </div>
+    <dialog class="gal-lightbox" aria-label="Enlarged screenshot"><button class="gal-close" type="button" aria-label="Close">&times;</button><img alt=""></dialog>
+  </section>
+
 
   <!-- Showcase: styled mockups, not screenshots. Swap .sc-screen contents
        for real in-game captures when we have them. -->
@@ -269,6 +293,54 @@
       <div class="standard-item"><span class="std-n">06</span><h3>Shared member banks</h3><p>Members can share their own bank with the guild too, so the loot helper can point you at the gem or enchant mat someone already holds.</p></div>
     </div>
   </section>
+
+  <section class="block" id="features">
+    <div class="section-head">
+      <div class="eyebrow">At a glance &middot; v0.117.0</div>
+      <h2>What's in SulphurUI</h2>
+    </div>
+    <div class="module-grid">
+      <article class="module-card">
+        <div class="module-top"><h3>Setup &amp; wizards</h3></div>
+        <p>A first-run setup plus wizards for Raid Frames, Unit Frames and Nameplates, all on one Wizards page.</p>
+      </article>
+      <article class="module-card">
+        <div class="module-top"><h3>Layout studio</h3></div>
+        <p><code>/sgrid</code> has a new disc control panel with typed X and Y, and every handle is the real size of the frame it moves.</p>
+      </article>
+      <article class="module-card">
+        <div class="module-top"><h3>Frames</h3></div>
+        <p>Unit frames, raid frames and nameplates with an execute range and health colours, plus preview pop-outs beside the settings window.</p>
+      </article>
+      <article class="module-card">
+        <div class="module-top"><h3>Bars &amp; HUD</h3></div>
+        <p>Action bars that can sit as mirrored pairs, and a HUD Builder whose cooldown rows also track their own buff automatically.</p>
+      </article>
+      <article class="module-card">
+        <div class="module-top"><h3>Windows &amp; skins</h3></div>
+        <p>A skinned quest tracker and quest log, themed movable tooltips, and Sulphur bags, bank, mail and merchant windows.</p>
+      </article>
+      <article class="module-card">
+        <div class="module-top"><h3>Utilities</h3></div>
+        <p>A minimap performance row, an info bar with gold, durability and more, and a set of quality-of-life switches.</p>
+      </article>
+      <article class="module-card">
+        <div class="module-top"><h3>Raid</h3></div>
+        <p>Guild Raid Assistant: Hero Plan lust calls, pre-raid and ready checks, BiS tracking and raid-wide sync.</p>
+      </article>
+    </div>
+    <h3>New in 0.115&ndash;0.117</h3>
+    <ul>
+      <li>Nameplates show an execute zone under your class's execute threshold, and health colours update on every change.</li>
+      <li>Open preview buttons pop the live Raid Frames, Unit Frames and Nameplates previews out beside <code>/sui</code>.</li>
+      <li>The layout studio has a new disc control panel and real-size handles.</li>
+      <li>HUD Builder cooldown rows show buff time while it is up, then the cooldown.</li>
+      <li>Mirrored action bar pairs, a fully skinned quest tracker and quest log, and a movable themed tooltip.</li>
+      <li>One Wizards page, a cleaner Home page and a minimap performance row.</li>
+      <li>Removed buffs now drop off the aura grid, and chat docks hold their place through a level-up.</li>
+    </ul>
+  </section>
+
 
   <section class="block" id="modules">
     <div class="section-head">
@@ -573,6 +645,6 @@
 
 </div>
 
-<script src="script.js?v=22"></script>
+<script src="script.js?v=23"></script>
 </body>
 </html>
