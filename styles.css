@@ -822,3 +822,26 @@ a.module-card:hover { text-decoration: none; }
 .dl-btn:focus-visible { outline: 2px solid var(--gold-strong); outline-offset: 3px; }
 .dl-glyph { flex: none; }
 @media (max-width: 520px) { .dl-pair { grid-template-columns: 1fr; max-width: none; } }
+
+.dl-latest { font-size: 13px; color: var(--ink-soft); margin: 8px 0 0; }
+
+/* Screenshot gallery */
+.gallery { outline: none; }
+.gal-stage { position: relative; aspect-ratio: 16 / 10; background: var(--bg); border: 1px solid var(--line); border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,.35); overflow: hidden; }
+.gal-slide { margin: 0; position: absolute; inset: 0; display: flex; flex-direction: column; }
+.gal-slide[hidden] { display: none; }
+.gal-slide img { flex: 1; min-height: 0; width: 100%; object-fit: contain; cursor: zoom-in; display: block; }
+.gal-slide figcaption { padding: 10px 14px; font-size: 13.5px; line-height: 1.5; color: var(--ink-soft); background: var(--surface); border-top: 1px solid var(--line); }
+.gal-nav { position: absolute; top: 45%; transform: translateY(-50%); width: 40px; height: 40px; border-radius: 50%; border: 1px solid var(--line); background: color-mix(in srgb, var(--surface) 85%, transparent); color: var(--ink); font-size: 26px; line-height: 1; cursor: pointer; }
+.gal-prev { left: 10px; } .gal-next { right: 10px; }
+.gal-nav:hover, .gal-thumb:hover { border-color: var(--gold); }
+.gal-nav:focus-visible, .gal-thumb:focus-visible, .gallery:focus-visible, .gal-close:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
+.gal-thumbs { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; justify-content: center; }
+.gal-thumb { padding: 0; width: 88px; aspect-ratio: 16 / 10; background: var(--bg); border: 1px solid var(--line); border-radius: 6px; overflow: hidden; cursor: pointer; opacity: .6; }
+.gal-thumb[aria-current="true"] { opacity: 1; border-color: var(--gold); }
+.gal-thumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.gal-lightbox { max-width: 96vw; max-height: 94vh; padding: 0; border: 1px solid var(--line); background: var(--bg); border-radius: 10px; }
+.gal-lightbox::backdrop { background: rgba(0,0,0,.8); }
+.gal-lightbox img { max-width: 96vw; max-height: 94vh; display: block; object-fit: contain; }
+.gal-close { position: absolute; top: 6px; right: 8px; background: var(--surface); color: var(--ink); border: 1px solid var(--line); border-radius: 50%; width: 34px; height: 34px; font-size: 20px; cursor: pointer; }
+@media (max-width: 560px) { .gal-stage { aspect-ratio: 4 / 3; } .gal-thumb { width: 56px; } .gal-nav { width: 34px; height: 34px; font-size: 22px; } }
