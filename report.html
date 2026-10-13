@@ -4,27 +4,30 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Report a bug or suggest — SulphurUI</title>
+<meta name="theme-color" content="#111110">
 <meta name="description" content="Send a SulphurUI bug report with your Debugger log, or a suggestion, to Sulphur_Dev.">
 <link rel="icon" type="image/png" href="favicon-sui.png">
-<link rel="stylesheet" href="styles.css?v=23">
+<link rel="stylesheet" href="styles.css?v=27">
 </head>
 <body>
 
-<nav class="topnav">
+<nav class="topnav" aria-label="Site">
   <div class="inner">
-    <a class="brand" href="index.html"><img src="sui-mark-96.png" alt="" class="brand-mark">Sulphur<em>UI</em></a>
+    <a class="brand" href="index.html"><img src="sui-mark-96.png" alt="" class="brand-mark" width="32" height="32">Sulphur<em>UI</em></a>
     <div class="links">
-      <a href="index.html">Home</a>
       <a href="index.html#modules">Modules</a>
-      <a href="gra.html">Commands</a>
+      <a href="index.html#screenshots">Screenshots</a>
+      <a href="gra.html">Raid Assistant</a>
+      <a href="index.html#install">Get started</a>
+      <a href="index.html#updates">Updates</a>
       <a href="report.html" class="active">Report a bug</a>
-      <a class="nav-donate" href="https://buymeacoffee.com/sulphurworks" target="_blank" rel="noopener">&#9749; Support</a>
-      <a class="nav-cta" href="https://addons.wago.io/addons/sulphurui" target="_blank" rel="noopener">Get SulphurUI</a>
+      <a class="btn btn-outline btn-sm" href="https://buymeacoffee.com/sulphurworks" target="_blank" rel="noopener">&#9749; Support</a>
+      <a class="btn btn-primary btn-sm" href="index.html#install">Get SulphurUI</a>
     </div>
   </div>
 </nav>
 
-<div class="wrap">
+<main class="wrap">
   <section class="block">
     <div class="section-head">
       <div class="eyebrow">Feedback</div>
@@ -44,7 +47,7 @@
         <label class="rp-field" data-only="bug"><span class="rp-lab">Realm <span class="rp-opt">(optional)</span></span><input name="realm" maxlength="64" autocomplete="off"></label>
       </div>
       <div class="rp-row">
-        <label class="rp-field"><span class="rp-lab">SulphurUI version<span class="rp-req">*</span></span><input name="version" required maxlength="32" value="0.113.0"></label>
+        <label class="rp-field"><span class="rp-lab">SulphurUI version<span class="rp-req">*</span></span><input name="version" required maxlength="32" value="0.117.0"></label>
         <label class="rp-field"><span class="rp-lab">Game client</span>
           <select name="client">
             <option>WoW Forever</option><option>Retail</option><option>MoP Classic</option><option>Classic Era</option>
@@ -74,15 +77,16 @@
   <footer class="sitefoot">
     <div class="foot-cols">
       <div class="foot-brand">
-        <img src="sui-mark-96.png" alt="">
-        <div><b>Sulphur Addons</b><p>SulphurUI, built by Sulphur_Dev. Not affiliated with Blizzard Entertainment.</p></div>
+        <img src="sui-mark-96.png" alt="" width="40" height="40">
+        <div><b>Sulphur Addons</b><p>SulphurUI, built by Sulphur_Dev.</p></div>
       </div>
-      <div class="foot-col"><h4>Get it</h4><a href="https://addons.wago.io/addons/sulphurui" target="_blank" rel="noopener">SulphurUI on Wago</a><a href="gra.html">Install &amp; commands</a></div>
-      <div class="foot-col"><h4>Explore</h4><a href="index.html#modules">Modules</a><a href="gra.html">Commands</a><a href="report.html">Report a bug / suggest</a></div>
-      <div class="foot-col"><h4>Support</h4><a href="https://buymeacoffee.com/sulphurworks" target="_blank" rel="noopener">&#9749; Buy me a coffee</a></div>
+      <div class="foot-col"><h4>Get it</h4><a href="https://addons.wago.io/addons/sulphurui" target="_blank" rel="noopener">Wago</a><a href="https://www.curseforge.com/wow/addons/sulphurui" target="_blank" rel="noopener">CurseForge</a><a href="index.html#install">Install guide</a></div>
+      <div class="foot-col"><h4>Explore</h4><a href="index.html#modules">Modules</a><a href="index.html#screenshots">Screenshots</a><a href="gra.html">GRA commands</a><a href="index.html#updates">Updates</a></div>
+      <div class="foot-col"><h4>Community</h4><a href="report.html">Report a bug / suggest</a><a href="https://github.com/sulphurthreads/sulphur-addons" target="_blank" rel="noopener">GitHub</a><a href="https://buymeacoffee.com/sulphurworks" target="_blank" rel="noopener">&#9749; Buy me a coffee</a></div>
     </div>
+    <p class="foot-note">Not affiliated with Blizzard Entertainment. World of Warcraft is a trademark of Blizzard Entertainment, Inc.</p>
   </footer>
-</div>
+</main>
 
 <script src="report.js?v=2"></script>
 </body>

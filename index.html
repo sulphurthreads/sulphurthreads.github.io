@@ -3,585 +3,365 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Sulphur Addons — SulphurUI</title>
-<meta name="description" content="SulphurUI: a modular WoW interface suite for Retail, MoP Classic, Classic Era and WoW Forever — twenty-eight module addons on one shell, one searchable settings panel and one layout grid.">
+<title>SulphurUI — Sulphur Addons</title>
+<meta name="description" content="SulphurUI: a modular World of Warcraft interface suite for Retail, MoP Classic, Classic Era and WoW Forever. Twenty-eight module addons on one shell, one searchable settings panel and one layout grid.">
+<meta name="theme-color" content="#111110">
 <link rel="icon" type="image/png" href="favicon-sui.png">
-<link rel="stylesheet" href="styles.css?v=26">
+<link rel="stylesheet" href="styles.css?v=27">
 </head>
 <body>
 
-<nav class="topnav">
+<nav class="topnav" aria-label="Site">
   <div class="inner">
-    <a class="brand" href="index.html"><img src="sui-mark-96.png" alt="" class="brand-mark">Sulphur<em>UI</em></a>
+    <a class="brand" href="index.html"><img src="sui-mark-96.png" alt="" class="brand-mark" width="32" height="32">Sulphur<em>UI</em></a>
     <div class="links">
-      <a href="index.html" class="active">Home</a>
-      <a href="index.html#modules">Modules</a>
-      <a href="index.html#ingame">In game</a>
-      <a href="index.html#concepts">Concepts</a>
+      <a href="#modules">Modules</a>
+      <a href="#screenshots">Screenshots</a>
+      <a href="#gra">Raid Assistant</a>
+      <a href="#install">Get started</a>
+      <a href="#updates">Updates</a>
       <a href="report.html">Report a bug</a>
-      <a href="gra.html">Commands</a>
-      <a class="nav-donate" href="https://buymeacoffee.com/sulphurworks" target="_blank" rel="noopener">&#9749; Support</a>
-      <a class="nav-cta" href="#download">Get SulphurUI</a>
+      <a class="btn btn-outline btn-sm" href="https://buymeacoffee.com/sulphurworks" target="_blank" rel="noopener">&#9749; Support</a>
+      <a class="btn btn-primary btn-sm" href="#install">Get SulphurUI</a>
     </div>
   </div>
 </nav>
 
-<div class="wrap">
+<main class="wrap">
 
   <header class="hero">
-    <div class="hero-copy">
-      <img class="hero-logo" src="sui-logo.png" width="640" height="531" alt="SulphurUI logo">
-      <div class="eyebrow">SulphurUI · Retail, MoP Classic, Classic Era &amp; WoW Forever</div>
-      <h1 class="hero-title">Built for raid night.<br><em>Down to the last frame.</em></h1>
+    <div>
+      <img class="hero-logo" src="sui-logo.png" width="640" height="531" alt="SulphurUI logo" fetchpriority="high">
+      <div class="eyebrow">Retail &middot; MoP Classic &middot; Classic Era &middot; WoW Forever</div>
+      <h1>Built for raid night.<br><em>Down to the last frame.</em></h1>
     </div>
     <div class="hero-side">
       <p class="dek">SulphurUI is one suite of twenty-eight module addons — unit and raid frames, nameplates, action bars, a HUD you build row by row, meters, chat, a guild raid assistant and more — sharing one shell, one searchable settings panel, one first-run setup and one layout grid. Every module ships switched off until you turn it on.</p>
-      <div class="hero-ctas">
-        <div class="dl-pair" id="download"><a class="btn btn-primary dl-btn" href="https://addons.wago.io/addons/sulphurui" target="_blank" rel="noopener" aria-label="Download on Wago"><svg class="dl-glyph" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><circle cx="2.6" cy="9.5" r="1.6" fill="currentColor" stroke="none"/><path d="M6 9.5c1.2 5.5 4.6 7.6 7.6 5.4" stroke="currentColor"/><path d="M21 12A5 5 0 1 1 16 7" stroke="currentColor"/><path d="M16 7A5 5 0 0 1 21 12" stroke="#e5484d"/></svg><span>Wago</span></a><a class="btn btn-primary dl-btn" href="https://www.curseforge.com/wow/addons/sulphurui" target="_blank" rel="noopener" aria-label="Download on CurseForge"><svg class="dl-glyph" viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M2 7h15.5c2.8 0 4.5 1.4 4.5 3.2-2.4 0-4.6.9-5.8 2.6l-.7 1H9.6C6 13.8 3.4 11.6 2 7z"/><path d="M9.5 15h6l1 3h-8z"/><rect x="6" y="18.2" width="13" height="2.3" rx=".6"/></svg><span>CurseForge</span></a></div>
-        <p class="dl-latest">Latest: v0.117.0</p>
-        <a class="btn btn-ghost" href="#modules">Explore the modules</a>
+      <div class="dl-pair">
+        <a class="btn btn-primary" href="https://addons.wago.io/addons/sulphurui" target="_blank" rel="noopener"><svg class="btn-glyph" viewBox="0 0 24 24" fill="none" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><circle cx="2.6" cy="9.5" r="1.6" fill="currentColor" stroke="none"/><path d="M6 9.5c1.2 5.5 4.6 7.6 7.6 5.4" stroke="currentColor"/><path d="M21 12A5 5 0 1 1 16 7" stroke="currentColor"/><path d="M16 7A5 5 0 0 1 21 12" stroke="#e5484d"/></svg>Download on Wago</a>
+        <a class="btn btn-primary" href="https://www.curseforge.com/wow/addons/sulphurui" target="_blank" rel="noopener"><svg class="btn-glyph" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M2 7h15.5c2.8 0 4.5 1.4 4.5 3.2-2.4 0-4.6.9-5.8 2.6l-.7 1H9.6C6 13.8 3.4 11.6 2 7z"/><path d="M9.5 15h6l1 3h-8z"/><rect x="6" y="18.2" width="13" height="2.3" rx=".6"/></svg>Download on CurseForge</a>
+      </div>
+      <div class="hero-meta">
+        <span>Latest release <b>v0.117.0</b></span>
+        <span>In game: <code>/sui</code></span>
+        <a href="#modules">Explore the modules &rarr;</a>
       </div>
     </div>
   </header>
 
-  <div class="stat-strip">
+  <div class="stat-strip" aria-label="At a glance">
     <div class="stat"><b>28</b><span>module addons</span></div>
     <div class="stat"><b>4</b><span>game clients, one codebase</span></div>
     <div class="stat"><b>57</b><span>Blizzard window skin packs</span></div>
-    <div class="stat"><b>1</b><span>settings panel, fully searchable</span></div>
+    <div class="stat"><b>1</b><span>searchable settings panel</span></div>
   </div>
 
+  <section class="block band" id="why">
+    <div class="section-head">
+      <div class="eyebrow">Why SulphurUI</div>
+      <h2>One shell. Everything else is a module.</h2>
+    </div>
+    <div class="grid-4">
+      <div class="card"><span class="card-n">01</span><h3>Guided setup</h3><p>A first-run Setup Wizard walks you through look, size, modules and layout in a few steps. Raid Frames, Unit Frames and Nameplates add their own wizards with live previews.</p></div>
+      <div class="card"><span class="card-n">02</span><h3>One panel, and it searches</h3><p>Every setting in every module lives in one registry. Type a word in <code>/sui</code> and each hit shows where it lives with its live control inline — the search result is the place you change it.</p></div>
+      <div class="card"><span class="card-n">03</span><h3>One layout grid</h3><p><code>/sgrid</code> opens the layout studio: pick a frame, type X and Y, toggle snapping. Every handle is the real size of the frame it moves, and <code>/sgrid home</code> snaps everything back.</p></div>
+      <div class="card"><span class="card-n">04</span><h3>Lightweight by design</h3><p>A switched-off module costs nothing and everything is event-driven. On Retail the meters read Blizzard's built-in damage meter instead of parsing the combat log.</p></div>
+    </div>
+  </section>
+
   <section class="block" id="screenshots">
-    <div class="section-head"><div class="eyebrow">In-game</div><h2>Screenshots</h2></div>
+    <div class="section-head">
+      <div class="eyebrow">Screenshots</div>
+      <h2>Running in the client.</h2>
+      <p class="sub">Unretouched captures of v0.117.0: the setup wizards and layout studio, and the WoW Forever test night of 26 September on a level 3 character. The build is still in progress — some Blizzard art, like the gold option labels and the parchment map, is not reskinned yet.</p>
+    </div>
     <div class="gallery" data-gallery tabindex="0" aria-roledescription="carousel" aria-label="SulphurUI screenshots">
       <div class="gal-stage">
-        <figure class="gal-slide"><img src="img/sui-layout-disc.png" alt="The new layout studio disc: pick a frame, type X and Y, toggle snapping." loading="eager" decoding="async"><figcaption>The new layout studio disc: pick a frame, type X and Y, toggle snapping.</figcaption></figure>
-        <figure class="gal-slide" hidden><img src="img/sui-home.png" alt="The /sui Home page: what's new and four quick actions." loading="lazy" decoding="async"><figcaption>The /sui Home page: what's new and four quick actions.</figcaption></figure>
-        <figure class="gal-slide" hidden><img src="img/sui-setup-welcome.png" alt="The setup wizard welcome page with quick-start profiles." loading="lazy" decoding="async"><figcaption>The setup wizard welcome page with quick-start profiles.</figcaption></figure>
-        <figure class="gal-slide" hidden><img src="img/sui-unitframes-setup.png" alt="The Unit Frames wizard with its live preview." loading="lazy" decoding="async"><figcaption>The Unit Frames wizard with its live preview.</figcaption></figure>
-        <figure class="gal-slide" hidden><img src="img/sui-nameplates-setup.png" alt="The Nameplates wizard preview showing the execute range." loading="lazy" decoding="async"><figcaption>The Nameplates wizard preview showing the execute range.</figcaption></figure>
+        <figure class="gal-slide"><img src="img/sui-layout-disc.png" alt="The layout studio disc: pick a frame, type X and Y, toggle snapping." loading="eager" decoding="async"><figcaption><b>Layout studio</b> Pick a frame, type X and Y, toggle snapping.</figcaption></figure>
+        <figure class="gal-slide" hidden><img src="img/sui-home.png" alt="The /sui Home page with what's new and four quick actions." loading="lazy" decoding="async"><figcaption><b>Home</b> The <code>/sui</code> Home page: what's new and four quick actions.</figcaption></figure>
+        <figure class="gal-slide" hidden><img src="img/sui-setup-welcome.png" alt="The setup wizard welcome page with quick-start profiles." loading="lazy" decoding="async"><figcaption><b>Setup wizard</b> The welcome page with quick-start profiles.</figcaption></figure>
+        <figure class="gal-slide" hidden><img src="img/sui-unitframes-setup.png" alt="The Unit Frames wizard with its live preview." loading="lazy" decoding="async"><figcaption><b>Unit Frames wizard</b> Options on the left, live preview on the right.</figcaption></figure>
+        <figure class="gal-slide" hidden><img src="img/sui-nameplates-setup.png" alt="The Nameplates wizard preview showing the execute range." loading="lazy" decoding="async"><figcaption><b>Nameplates wizard</b> The preview showing the execute range.</figcaption></figure>
+        <figure class="gal-slide" hidden><img src="img/ingame/c_char.jpg" alt="In-game: the Character window with the Sulphur skin." loading="lazy" decoding="async"><figcaption><b>Character window</b> The Sulphur skin: flat panels, green-edged gear-slot boxes and a stat column.</figcaption></figure>
+        <figure class="gal-slide" hidden><img src="img/ingame/c_opts2.jpg" alt="In-game: Blizzard's Options window in the Sulphur shell." loading="lazy" decoding="async"><figcaption><b>Options</b> Blizzard's own Options window in the Sulphur shell: rail, search box and green-accent controls.</figcaption></figure>
+        <figure class="gal-slide" hidden><img src="img/ingame/c_map.jpg" alt="In-game: the world map and quest log in one skinned window." loading="lazy" decoding="async"><figcaption><b>Map &amp; quest log</b> One skinned window, quests grouped by zone.</figcaption></figure>
+        <figure class="gal-slide" hidden><img src="img/ingame/np1.jpg" alt="In-game: Sulphur Nameplates on live mobs and the Sulphur XP bar." loading="lazy" decoding="async"><figcaption><b>Nameplates and XP</b> Plates on live mobs with the targeted plate edged in green; Sulphur XP across the top with its rested and session texts.</figcaption></figure>
+        <figure class="gal-slide" hidden><img src="img/ingame/tr1.jpg" alt="In-game: Sulphur Minimap next to the Sulphur Auras grid." loading="lazy" decoding="async"><figcaption><b>Minimap and auras</b> The zone, spec and profession stack and the button row, next to the Sulphur Auras header and grid.</figcaption></figure>
+        <figure class="gal-slide" hidden><img src="img/ingame/uf1.jpg" alt="In-game: the Sulphur Unit Frames player frame and cast bar." loading="lazy" decoding="async"><figcaption><b>Unit frame and cast bar</b> The player frame with its portrait and the cast bar mid-cast, beside the skinned micro menu.</figcaption></figure>
         <button class="gal-nav gal-prev" type="button" aria-label="Previous screenshot">&#8249;</button>
         <button class="gal-nav gal-next" type="button" aria-label="Next screenshot">&#8250;</button>
       </div>
       <div class="gal-thumbs">
-      <button class="gal-thumb" type="button" aria-label="Show screenshot 1" aria-current="true"><img src="img/sui-layout-disc.png" alt="" loading="lazy"></button>
-      <button class="gal-thumb" type="button" aria-label="Show screenshot 2"><img src="img/sui-home.png" alt="" loading="lazy"></button>
-      <button class="gal-thumb" type="button" aria-label="Show screenshot 3"><img src="img/sui-setup-welcome.png" alt="" loading="lazy"></button>
-      <button class="gal-thumb" type="button" aria-label="Show screenshot 4"><img src="img/sui-unitframes-setup.png" alt="" loading="lazy"></button>
-      <button class="gal-thumb" type="button" aria-label="Show screenshot 5"><img src="img/sui-nameplates-setup.png" alt="" loading="lazy"></button>
+        <button class="gal-thumb" type="button" aria-label="Show screenshot 1" aria-current="true"><img src="img/sui-layout-disc.png" alt="" loading="lazy"></button>
+        <button class="gal-thumb" type="button" aria-label="Show screenshot 2"><img src="img/sui-home.png" alt="" loading="lazy"></button>
+        <button class="gal-thumb" type="button" aria-label="Show screenshot 3"><img src="img/sui-setup-welcome.png" alt="" loading="lazy"></button>
+        <button class="gal-thumb" type="button" aria-label="Show screenshot 4"><img src="img/sui-unitframes-setup.png" alt="" loading="lazy"></button>
+        <button class="gal-thumb" type="button" aria-label="Show screenshot 5"><img src="img/sui-nameplates-setup.png" alt="" loading="lazy"></button>
+        <button class="gal-thumb" type="button" aria-label="Show screenshot 6"><img src="img/ingame/c_char.jpg" alt="" loading="lazy"></button>
+        <button class="gal-thumb" type="button" aria-label="Show screenshot 7"><img src="img/ingame/c_opts2.jpg" alt="" loading="lazy"></button>
+        <button class="gal-thumb" type="button" aria-label="Show screenshot 8"><img src="img/ingame/c_map.jpg" alt="" loading="lazy"></button>
+        <button class="gal-thumb" type="button" aria-label="Show screenshot 9"><img src="img/ingame/np1.jpg" alt="" loading="lazy"></button>
+        <button class="gal-thumb" type="button" aria-label="Show screenshot 10"><img src="img/ingame/tr1.jpg" alt="" loading="lazy"></button>
+        <button class="gal-thumb" type="button" aria-label="Show screenshot 11"><img src="img/ingame/uf1.jpg" alt="" loading="lazy"></button>
       </div>
     </div>
     <dialog class="gal-lightbox" aria-label="Enlarged screenshot"><button class="gal-close" type="button" aria-label="Close">&times;</button><img alt=""></dialog>
   </section>
 
-
-  <!-- Showcase: styled mockups, not screenshots. Swap .sc-screen contents
-       for real in-game captures when we have them. -->
-  <section class="showcase" data-tabs aria-label="Module showcase">
-    <div class="showcase-tabs" role="tablist">
-      <button type="button" role="tab" id="sct-raid" aria-controls="sc-raid" aria-selected="true">Raid Frames</button>
-      <button type="button" role="tab" id="sct-meters" aria-controls="sc-meters" aria-selected="false" tabindex="-1">Meters</button>
-      <button type="button" role="tab" id="sct-bars" aria-controls="sc-bars" aria-selected="false" tabindex="-1">Action Bars</button>
-      <button type="button" role="tab" id="sct-gra" aria-controls="sc-gra" aria-selected="false" tabindex="-1">Raid Assistant</button>
-      <button type="button" role="tab" id="sct-opts" aria-controls="sc-opts" aria-selected="false" tabindex="-1">Settings</button>
-    </div>
-
-    <div class="sc-panel" id="sc-raid" role="tabpanel" aria-labelledby="sct-raid">
-      <div class="sc-screen" aria-hidden="true">
-        <div class="ui-win rf">
-          <div class="ui-win-head">Raid <small>preview · 20</small></div>
-          <div class="ui-win-body rf-grid">
-            <div class="rf-cell agro" style="--cls:#C69B6D;--hp:100%"><b>Brakka</b><i>100%</i></div>
-            <div class="rf-cell" style="--cls:#F48CBA;--hp:88%"><b>Seraphel</b><i>88%</i></div>
-            <div class="rf-cell" style="--cls:#E8E8E8;--hp:74%"><b>Lumina</b><i>74%</i></div>
-            <div class="rf-cell" style="--cls:#3FC7EB;--hp:100%"><b>Vexxa</b><i>100%</i></div>
-            <div class="rf-cell low" style="--cls:#FFF468;--hp:42%"><b>Kestrel</b><i>42%</i><span class="rf-debuff"></span></div>
-            <div class="rf-cell" style="--cls:#FF7C0A;--hp:96%"><b>Thornwyn</b><i>96%</i></div>
-            <div class="rf-cell" style="--cls:#AAD372;--hp:100%"><b>Rawhide</b><i>100%</i></div>
-            <div class="rf-cell" style="--cls:#0070DD;--hp:81%"><b>Tidecall</b><i>81%</i></div>
-            <div class="rf-cell low" style="--cls:#8788EE;--hp:23%"><b>Morvane</b><i>23%</i></div>
-            <div class="rf-cell" style="--cls:#00FF98;--hp:100%"><b>Jadeleaf</b><i>100%</i></div>
-            <div class="rf-cell" style="--cls:#C41E3A;--hp:67%"><b>Grimveil</b><i>67%</i></div>
-            <div class="rf-cell" style="--cls:#3FC7EB;--hp:100%"><b>Frostine</b><i>100%</i></div>
-            <div class="rf-cell" style="--cls:#E8E8E8;--hp:90%"><b>Halcyra</b><i>90%</i></div>
-            <div class="rf-cell dead" style="--cls:#C69B6D;--hp:0%"><b>Durgan</b><i>Dead</i></div>
-            <div class="rf-cell" style="--cls:#FF7C0A;--hp:58%"><b>Mossgrip</b><i>58%</i><span class="rf-debuff"></span></div>
-            <div class="rf-cell" style="--cls:#AAD372;--hp:100%"><b>Quillshot</b><i>100%</i></div>
-            <div class="rf-cell" style="--cls:#0070DD;--hp:93%"><b>Stormjaw</b><i>93%</i></div>
-            <div class="rf-cell" style="--cls:#F48CBA;--hp:100%"><b>Aurelis</b><i>100%</i></div>
-            <div class="rf-cell" style="--cls:#FFF468;--hp:77%"><b>Nightvel</b><i>77%</i></div>
-            <div class="rf-cell" style="--cls:#8788EE;--hp:100%"><b>Hexley</b><i>100%</i></div>
-          </div>
-        </div>
-      </div>
-      <div class="sc-caption">
-        <span class="badge badge-dev">In development</span>
-        <h3>Raid frames you can lay out solo</h3>
-        <p>A fake-roster preview fills the frames when you're not in a group, so you can size, sort and place them before raid night instead of during it.</p>
-        <div class="chip-row"><code>/srf</code><span class="flavor">Retail</span><span class="flavor">MoP</span><span class="flavor">Era</span><span class="flavor">Forever</span></div>
-      </div>
-    </div>
-
-    <div class="sc-panel" id="sc-meters" role="tabpanel" aria-labelledby="sct-meters" hidden>
-      <div class="sc-screen" aria-hidden="true">
-        <div class="mt-dock">
-          <div class="ui-win">
-            <div class="ui-win-head">Damage <small>this pull</small></div>
-            <div class="ui-win-body">
-              <div class="mt-row" style="--cls:#3FC7EB;--w:100%"><span>1. Frostine</span><span>612.4K</span></div>
-              <div class="mt-row" style="--cls:#8788EE;--w:96%"><span>2. Morvane</span><span>588.1K</span></div>
-              <div class="mt-row" style="--cls:#FFF468;--w:93%"><span>3. Kestrel</span><span>571.9K</span></div>
-              <div class="mt-row" style="--cls:#AAD372;--w:89%"><span>4. Rawhide</span><span>544.0K</span></div>
-              <div class="mt-row" style="--cls:#C41E3A;--w:85%"><span>5. Grimveil</span><span>520.6K</span></div>
-              <div class="mt-row" style="--cls:#0070DD;--w:81%"><span>6. Stormjaw</span><span>497.3K</span></div>
-              <div class="mt-row" style="--cls:#3FC7EB;--w:77%"><span>7. Vexxa</span><span>472.8K</span></div>
-            </div>
-          </div>
-          <div class="ui-win">
-            <div class="ui-win-head">Healing <small>this pull</small></div>
-            <div class="ui-win-body">
-              <div class="mt-row" style="--cls:#E8E8E8;--w:100%"><span>1. Lumina</span><span>318.2K</span></div>
-              <div class="mt-row" style="--cls:#FF7C0A;--w:92%"><span>2. Thornwyn</span><span>291.5K</span></div>
-              <div class="mt-row" style="--cls:#0070DD;--w:87%"><span>3. Tidecall</span><span>276.0K</span></div>
-              <div class="mt-row" style="--cls:#00FF98;--w:77%"><span>4. Jadeleaf</span><span>244.7K</span></div>
-              <div class="mt-row" style="--cls:#F48CBA;--w:63%"><span>5. Seraphel</span><span>201.3K</span></div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="sc-caption">
-        <span class="badge badge-dev">In development</span>
-        <h3>Thin meters that dock together</h3>
-        <p>Up to four meter windows. Drag one onto another and they dock into a single train; click any bar for that player's spell breakdown. Reads Blizzard's damage meter on Midnight and parses the combat log on MoP.</p>
-        <div class="chip-row"><code>/smeter</code><span class="flavor">Retail</span><span class="flavor">MoP</span><span class="flavor">Era</span><span class="flavor">Forever</span></div>
-      </div>
-    </div>
-
-    <div class="sc-panel" id="sc-bars" role="tabpanel" aria-labelledby="sct-bars" hidden>
-      <div class="sc-screen sc-screen--col" aria-hidden="true">
-        <div class="grid-frame">
-          <span class="grid-chip">Action Bar 1 · 12 × 1</span>
-          <div class="ab-row">
-            <span class="ab-btn"><i>1</i></span>
-            <span class="ab-btn"><i>2</i></span>
-            <span class="ab-btn cd" style="--cd:62%"><i>3</i><em>8</em></span>
-            <span class="ab-btn"><i>4</i></span>
-            <span class="ab-btn"><i>5</i></span>
-            <span class="ab-btn proc"><i>6</i></span>
-            <span class="ab-btn"><i>7</i></span>
-            <span class="ab-btn"><i>8</i></span>
-            <span class="ab-btn oor"><i>9</i></span>
-            <span class="ab-btn"><i>0</i></span>
-            <span class="ab-btn cd" style="--cd:30%"><i>-</i><em>24</em></span>
-            <span class="ab-btn"><i>=</i></span>
-          </div>
-        </div>
-        <div class="grid-frame">
-          <span class="grid-chip">Action Bar 2 · 12 × 1</span>
-          <div class="ab-row">
-            <span class="ab-btn"><i>S1</i></span>
-            <span class="ab-btn"><i>S2</i></span>
-            <span class="ab-btn"><i>S3</i></span>
-            <span class="ab-btn cd" style="--cd:85%"><i>S4</i><em>1:40</em></span>
-            <span class="ab-btn"><i>S5</i></span>
-            <span class="ab-btn"><i>S6</i></span>
-            <span class="ab-btn"><i>S7</i></span>
-            <span class="ab-btn"><i>S8</i></span>
-            <span class="ab-btn"><i>S9</i></span>
-            <span class="ab-btn"><i>S0</i></span>
-            <span class="ab-btn"><i>F1</i></span>
-            <span class="ab-btn"><i>F2</i></span>
-          </div>
-        </div>
-      </div>
-      <div class="sc-caption">
-        <span class="badge badge-dev">In development</span>
-        <h3>Blizzard's buttons, your layout</h3>
-        <p>Eight bars built on Blizzard's own action buttons, so cooldowns, charges and range stay exactly right. Paging runs on secure drivers, keybinding has its own mode, and layout profiles remember spells rather than slots.</p>
-        <div class="chip-row"><code>/sbars</code><code>/skb</code><span class="flavor">Retail</span><span class="flavor">MoP</span><span class="flavor">Era</span><span class="flavor">Forever</span></div>
-      </div>
-    </div>
-
-    <div class="sc-panel" id="sc-gra" role="tabpanel" aria-labelledby="sct-gra" hidden>
-      <div class="sc-screen" aria-hidden="true">
-        <div class="gra">
-          <div class="ui-win">
-            <div class="ui-win-head">Hero Plan <small>SoO</small></div>
-            <div class="ui-win-body">
-              <div class="kv-row"><span>Immerseus</span><span class="call pull">On pull</span></div>
-              <div class="kv-row"><span>Norushen</span><span class="call">35%</span></div>
-              <div class="kv-row"><span>Sha of Pride</span><span class="call">30%</span></div>
-              <div class="kv-row"><span>Iron Juggernaut</span><span class="call pull">On pull</span></div>
-              <div class="kv-row"><span>Thok the Bloodthirsty</span><span class="call">25%</span></div>
-              <div class="kv-row"><span>Garrosh Hellscream</span><span class="call">10%</span></div>
-            </div>
-          </div>
-          <div class="ui-win">
-            <div class="ui-win-head">Ready Check <small>pre-raid</small></div>
-            <div class="ui-win-body">
-              <div class="rc-row head"><span>Player</span><span>Flask</span><span>Food</span><span>Gems</span></div>
-              <div class="rc-row"><span>Brakka</span><span class="ok">✓</span><span class="ok">✓</span><span class="ok">✓</span></div>
-              <div class="rc-row"><span>Kestrel</span><span class="ok">✓</span><span class="no">✗</span><span class="ok">✓</span></div>
-              <div class="rc-row"><span>Lumina</span><span class="ok">✓</span><span class="ok">✓</span><span class="ok">✓</span></div>
-              <div class="rc-row"><span>Morvane</span><span class="no">✗</span><span class="ok">✓</span><span class="no">✗</span></div>
-              <div class="rc-row"><span>Rawhide</span><span class="ok">✓</span><span class="ok">✓</span><span class="ok">✓</span></div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="sc-caption">
-        <span class="badge badge-live">Live · v0.117.0</span>
-        <h3>The guild raid assistant</h3>
-        <p>Plan Bloodlust per boss, catch missing consumables on every ready check, track BiS drops and pull timers, and sync it all across the raid automatically.</p>
-        <div class="chip-row"><a class="pill-link" href="gra.html">Commands &amp; install &rarr;</a><span class="flavor">MoP Classic</span></div>
-      </div>
-    </div>
-
-    <div class="sc-panel" id="sc-opts" role="tabpanel" aria-labelledby="sct-opts" hidden>
-      <div class="sc-screen" aria-hidden="true">
-        <div class="ui-win opt">
-          <div class="opt-rail">
-            <span>General</span>
-            <span>Theme</span>
-            <span>Raid Frames</span>
-            <span class="on">Unit Frames</span>
-            <span>Action Bars</span>
-            <span>Meters</span>
-            <span>Chat</span>
-            <span>Minimap</span>
-          </div>
-          <div class="opt-main">
-            <div class="opt-search"><span class="opt-glass"></span><b>portrait</b><span class="opt-caret"></span><small>3 results</small></div>
-            <div class="opt-hit">
-              <span class="opt-crumb">Unit Frames › Player</span>
-              <span class="opt-label">Show portrait</span>
-              <span class="toggle on"></span>
-            </div>
-            <div class="opt-hit">
-              <span class="opt-crumb">Unit Frames › Player</span>
-              <span class="opt-label">3D portrait</span>
-              <span class="toggle"></span>
-            </div>
-            <div class="opt-hit">
-              <span class="opt-crumb">Unit Frames › Target</span>
-              <span class="opt-label">Portrait size (px)</span>
-              <span class="opt-num" style="--v:55%"><span class="opt-track"></span><span class="opt-field">42</span></span>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="sc-caption">
-        <span class="badge badge-dev">In development</span>
-        <h3>One panel, and it searches</h3>
-        <p>Every setting in every module lives in one registry. Type a word and each hit shows where it lives and its live control inline, so the search result is the place you change it.</p>
-        <div class="chip-row"><code>/sui</code><code>/sgrid</code><span class="flavor">Retail</span><span class="flavor">MoP</span><span class="flavor">Era</span><span class="flavor">Forever</span></div>
-      </div>
-    </div>
-  </section>
-
-  <section class="block standard" id="highlights">
-    <div class="section-head">
-      <div class="eyebrow">Highlights</div>
-      <h2>What sets it apart.</h2>
-    </div>
-    <div class="standard-grid">
-      <div class="standard-item"><span class="std-n">01</span><h3>Guided setup</h3><p>A first-run Setup Wizard walks you through look, size, modules and layout in a few steps. Raid Frames adds its own role-guided Frame Setup with a live preview, and Chat and GRA add setup pages of their own.</p></div>
-      <div class="standard-item"><span class="std-n">02</span><h3>Lightweight by design</h3><p>A switched-off module costs nothing, and everything is event-driven. On Retail the meters read Blizzard's built-in damage meter instead of parsing the combat log.</p></div>
-      <div class="standard-item"><span class="std-n">03</span><h3>BiS priority</h3><p>GRA knows your BiS list and its tiers. When an item drops it tells you whether it is your main-spec roll, checked against the item level you already wear.</p></div>
-      <div class="standard-item"><span class="std-n">04</span><h3>Know what to roll on</h3><p>Works with the Gargul loot addon: GRA reads its roll announcements live and pops up a verdict for that exact item, then closes on the award.</p></div>
-      <div class="standard-item"><span class="std-n">05</span><h3>Guild bank, in sync</h3><p>GRA scans the guild bank and shares it over the guild channel, so everyone's Storage window shows the same up-to-date stock.</p></div>
-      <div class="standard-item"><span class="std-n">06</span><h3>Shared member banks</h3><p>Members can share their own bank with the guild too, so the loot helper can point you at the gem or enchant mat someone already holds.</p></div>
-    </div>
-  </section>
-
-  <section class="block" id="features">
-    <div class="section-head">
-      <div class="eyebrow">At a glance &middot; v0.117.0</div>
-      <h2>What's in SulphurUI</h2>
-    </div>
-    <div class="module-grid">
-      <article class="module-card">
-        <div class="module-top"><h3>Setup &amp; wizards</h3></div>
-        <p>A first-run setup plus wizards for Raid Frames, Unit Frames and Nameplates, all on one Wizards page.</p>
-      </article>
-      <article class="module-card">
-        <div class="module-top"><h3>Layout studio</h3></div>
-        <p><code>/sgrid</code> has a new disc control panel with typed X and Y, and every handle is the real size of the frame it moves.</p>
-      </article>
-      <article class="module-card">
-        <div class="module-top"><h3>Frames</h3></div>
-        <p>Unit frames, raid frames and nameplates with an execute range and health colours, plus preview pop-outs beside the settings window.</p>
-      </article>
-      <article class="module-card">
-        <div class="module-top"><h3>Bars &amp; HUD</h3></div>
-        <p>Action bars that can sit as mirrored pairs, and a HUD Builder whose cooldown rows also track their own buff automatically.</p>
-      </article>
-      <article class="module-card">
-        <div class="module-top"><h3>Windows &amp; skins</h3></div>
-        <p>A skinned quest tracker and quest log, themed movable tooltips, and Sulphur bags, bank, mail and merchant windows.</p>
-      </article>
-      <article class="module-card">
-        <div class="module-top"><h3>Utilities</h3></div>
-        <p>A minimap performance row, an info bar with gold, durability and more, and a set of quality-of-life switches.</p>
-      </article>
-      <article class="module-card">
-        <div class="module-top"><h3>Raid</h3></div>
-        <p>Guild Raid Assistant: Hero Plan lust calls, pre-raid and ready checks, BiS tracking and raid-wide sync.</p>
-      </article>
-    </div>
-    <h3>New in 0.115&ndash;0.117</h3>
-    <ul>
-      <li>Nameplates show an execute zone under your class's execute threshold, and health colours update on every change.</li>
-      <li>Open preview buttons pop the live Raid Frames, Unit Frames and Nameplates previews out beside <code>/sui</code>.</li>
-      <li>The layout studio has a new disc control panel and real-size handles.</li>
-      <li>HUD Builder cooldown rows show buff time while it is up, then the cooldown.</li>
-      <li>Mirrored action bar pairs, a fully skinned quest tracker and quest log, and a movable themed tooltip.</li>
-      <li>One Wizards page, a cleaner Home page and a minimap performance row.</li>
-      <li>Removed buffs now drop off the aura grid, and chat docks hold their place through a level-up.</li>
-    </ul>
-  </section>
-
-
   <section class="block" id="modules">
     <div class="section-head">
-      <div class="eyebrow">The suite</div>
+      <div class="eyebrow">The suite &middot; v0.117.0</div>
       <h2>Twenty-eight modules. Turn on only what you use.</h2>
-      <p class="sub">Each module is its own addon sitting on the SulphurUI core, so they share one look, one settings panel, one first-run setup and one snap-and-dock layout grid. Status is shown honestly: GRA is live, and the rest is built and waiting on its in-game pass. Retail-only modules are the ones built on systems the Classic clients do not have.</p>
+      <p class="sub">Each module is its own addon on the SulphurUI core, so they share one look, one settings panel, one first-run setup and one snap-and-dock layout grid. Every module runs on all four clients unless marked otherwise. Sulphur GRA is live; the rest is built and waiting on its in-game pass.</p>
     </div>
-    <div class="module-grid">
-
-      <a class="module-card is-live" href="gra.html">
-        <div class="module-top"><h3>Sulphur GRA</h3><span class="badge badge-live">Live</span></div>
+    <div class="grid-4">
+      <a class="card is-live" href="gra.html">
+        <div class="card-top"><h3>Sulphur GRA</h3><span class="badge badge-live">Live</span></div>
         <p>Guild Raid Assistant: Hero Plan lust calls, pre-raid and ready checks, BiS tracking, guild-bank scan, loot popup and raid-wide sync.</p>
-        <div class="module-foot"><span class="flavor">MoP</span></div>
+        <div class="card-foot"><code>/sgra</code><span class="chip">MoP Classic</span></div>
       </a>
-
-      <article class="module-card">
-        <div class="module-top"><h3>Sulphur Unit Frames</h3><span class="badge badge-dev">In dev</span></div>
+      <article class="card">
+        <div class="card-top"><h3>Sulphur Unit Frames</h3><span class="badge badge-dev">In dev</span></div>
         <p>Player, target, target of target, focus and pet on secure buttons, with 2D or 3D portraits and a live preview in settings.</p>
-        <div class="module-foot"><code>/suf</code><span class="flavor">Retail</span><span class="flavor">MoP</span><span class="flavor">Era</span><span class="flavor">Forever</span></div>
+        <div class="card-foot"><code>/suf</code></div>
       </article>
-
-      <article class="module-card">
-        <div class="module-top"><h3>Sulphur Raid Frames</h3><span class="badge badge-dev">In dev</span></div>
-        <p>Raid frames with cast bars and a fake-roster preview, so the layout is set before you ever zone in.</p>
-        <div class="module-foot"><code>/srf</code><span class="flavor">Retail</span><span class="flavor">MoP</span><span class="flavor">Era</span><span class="flavor">Forever</span></div>
+      <article class="card">
+        <div class="card-top"><h3>Sulphur Raid Frames</h3><span class="badge badge-dev">In dev</span></div>
+        <p>Raid frames with cast bars and a fake-roster preview, so you can size, sort and place them before raid night instead of during it.</p>
+        <div class="card-foot"><code>/srf</code></div>
       </article>
-
-      <article class="module-card">
-        <div class="module-top"><h3>Sulphur Nameplates</h3><span class="badge badge-dev">In dev</span></div>
-        <p>Our own plates on Blizzard's nameplate frames: health, cast bar, your debuffs with pandemic cues, and a taunt and CC row.</p>
-        <div class="module-foot"><code>/snp</code><span class="flavor">Retail</span><span class="flavor">MoP</span><span class="flavor">Era</span><span class="flavor">Forever</span></div>
+      <article class="card">
+        <div class="card-top"><h3>Sulphur Nameplates</h3><span class="badge badge-dev">In dev</span></div>
+        <p>Our own plates on Blizzard's nameplate frames: health with an execute zone, cast bar, your debuffs with pandemic cues, and a taunt and CC row.</p>
+        <div class="card-foot"><code>/snp</code></div>
       </article>
-
-      <article class="module-card">
-        <div class="module-top"><h3>Sulphur Action Bars</h3><span class="badge badge-dev">In dev</span></div>
-        <p>Eight bars on Blizzard's own buttons, secure paging, a keybind mode, and layout profiles that remember spells.</p>
-        <div class="module-foot"><code>/sbars</code><span class="flavor">Retail</span><span class="flavor">MoP</span><span class="flavor">Era</span><span class="flavor">Forever</span></div>
+      <article class="card">
+        <div class="card-top"><h3>Sulphur Action Bars</h3><span class="badge badge-dev">In dev</span></div>
+        <p>Eight bars on Blizzard's own buttons so cooldowns, charges and range stay exact. Secure paging, a keybind mode, mirrored pairs, and layout profiles that remember spells.</p>
+        <div class="card-foot"><code>/sbars</code><code>/skb</code></div>
       </article>
-
-      <article class="module-card">
-        <div class="module-top"><h3>Sulphur HUD Builder</h3><span class="badge badge-dev">In dev</span></div>
-        <p>Build a HUD one row at a time per class and spec: health, power, pips, cast bar, cooldowns, auras, missing buffs.</p>
-        <div class="module-foot"><code>/shb</code><span class="flavor">Retail</span><span class="flavor">MoP</span><span class="flavor">Era</span><span class="flavor">Forever</span></div>
+      <article class="card">
+        <div class="card-top"><h3>Sulphur HUD Builder</h3><span class="badge badge-dev">In dev</span></div>
+        <p>Build a HUD one row at a time per class and spec: health, power, pips, cast bar, cooldowns, auras, missing buffs. Cooldown rows track their own buff automatically.</p>
+        <div class="card-foot"><code>/shb</code></div>
       </article>
-
-      <article class="module-card">
-        <div class="module-top"><h3>Sulphur Resource Bars</h3><span class="badge badge-dev">In dev</span></div>
+      <article class="card">
+        <div class="card-top"><h3>Sulphur Resource Bars</h3><span class="badge badge-dev">In dev</span></div>
         <p>A player-centred stack of class pips, health, power and your cast bar, with secret-safe text and engine-smoothed bars.</p>
-        <div class="module-foot"><code>/sres</code><span class="flavor">Retail</span><span class="flavor">MoP</span><span class="flavor">Era</span><span class="flavor">Forever</span></div>
+        <div class="card-foot"><code>/sres</code></div>
       </article>
-
-      <article class="module-card">
-        <div class="module-top"><h3>Sulphur Class HUD</h3><span class="badge badge-dev">In dev</span></div>
+      <article class="card">
+        <div class="card-top"><h3>Sulphur Class HUD</h3><span class="badge badge-dev">In dev</span></div>
         <p>Three icon rows for the cooldowns, utility and procs you choose, including trinkets that show proc, then cooldown, on one icon.</p>
-        <div class="module-foot"><code>/schud</code><span class="flavor">Retail</span><span class="flavor">MoP</span><span class="flavor">Era</span><span class="flavor">Forever</span></div>
+        <div class="card-foot"><code>/schud</code></div>
       </article>
-
-      <article class="module-card">
-        <div class="module-top"><h3>Sulphur Cooldown Manager</h3><span class="badge badge-dev">In dev</span></div>
+      <article class="card">
+        <div class="card-top"><h3>Sulphur Cooldown Manager</h3><span class="badge badge-dev">In dev</span></div>
         <p>Blizzard's own cooldown viewers moved into placeable Sulphur containers, with a reversible restyle and drawn buff bars.</p>
-        <div class="module-foot"><code>/scdm</code><span class="flavor">Retail</span><span class="flavor">MoP</span><span class="flavor">Era</span><span class="flavor">Forever</span></div>
+        <div class="card-foot"><code>/scdm</code></div>
       </article>
-
-      <article class="module-card">
-        <div class="module-top"><h3>Sulphur Auras</h3><span class="badge badge-dev">In dev</span></div>
+      <article class="card">
+        <div class="card-top"><h3>Sulphur Auras</h3><span class="badge badge-dev">In dev</span></div>
         <p>Your buffs and debuffs in two independently placed grids, with a fold-away header and a preview for placing them.</p>
-        <div class="module-foot"><code>/saura</code><span class="flavor">Retail</span><span class="flavor">MoP</span><span class="flavor">Era</span><span class="flavor">Forever</span></div>
+        <div class="card-foot"><code>/saura</code></div>
       </article>
-
-      <article class="module-card">
-        <div class="module-top"><h3>Sulphur Reminders</h3><span class="badge badge-dev">In dev</span></div>
+      <article class="card">
+        <div class="card-top"><h3>Sulphur Reminders</h3><span class="badge badge-dev">In dev</span></div>
         <p>A missing-buff row for your class raid buff, upkeep buffs, weapon imbue and Healthstone. Out of combat only.</p>
-        <div class="module-foot"><code>/srem</code><span class="flavor">Retail</span><span class="flavor">MoP</span><span class="flavor">Era</span><span class="flavor">Forever</span></div>
+        <div class="card-foot"><code>/srem</code></div>
       </article>
-
-      <article class="module-card">
-        <div class="module-top"><h3>Sulphur Combat Aids</h3><span class="badge badge-dev">In dev</span></div>
+      <article class="card">
+        <div class="card-top"><h3>Sulphur Combat Aids</h3><span class="badge badge-dev">In dev</span></div>
         <p>A battle-res charge tracker and a movement-cooldown alert, both event-driven, both off until you want them.</p>
-        <div class="module-foot"><code>/saids</code><span class="flavor">Retail</span><span class="flavor">MoP</span><span class="flavor">Era</span><span class="flavor">Forever</span></div>
+        <div class="card-foot"><code>/saids</code></div>
       </article>
-
-      <article class="module-card">
-        <div class="module-top"><h3>Sulphur QuickFlick</h3><span class="badge badge-dev">In dev</span></div>
+      <article class="card">
+        <div class="card-top"><h3>Sulphur QuickFlick</h3><span class="badge badge-dev">In dev</span></div>
         <p>Hold a key, a ring of up to eight spells opens at the cursor, aim and release to cast. Works in combat.</p>
-        <div class="module-foot"><code>/sqf</code><span class="flavor">Retail</span><span class="flavor">MoP</span><span class="flavor">Era</span><span class="flavor">Forever</span></div>
+        <div class="card-foot"><code>/sqf</code></div>
       </article>
-
-      <article class="module-card">
-        <div class="module-top"><h3>Sulphur Merchant</h3><span class="badge badge-dev">In dev</span></div>
+      <article class="card">
+        <div class="card-top"><h3>Sulphur Merchant</h3><span class="badge badge-dev">In dev</span></div>
         <p>A Sulphur vendor window: paged items, a Buyback tab, shift-click for a stack, confirms on costly buys, sell-junk and repair buttons.</p>
-        <div class="module-foot"><code>/smerchant</code><span class="flavor">Retail</span><span class="flavor">MoP</span><span class="flavor">Era</span><span class="flavor">Forever</span></div>
+        <div class="card-foot"><code>/smerchant</code></div>
       </article>
-
-      <article class="module-card">
-        <div class="module-top"><h3>Sulphur Raid Tools</h3><span class="badge badge-dev">In dev</span></div>
+      <article class="card">
+        <div class="card-top"><h3>Sulphur Raid Tools</h3><span class="badge badge-dev">In dev</span></div>
         <p>A raid-leader bar: raid and world markers, ready check, role check, pull timer and raid convert.</p>
-        <div class="module-foot"><code>/srt</code><span class="flavor">Retail</span><span class="flavor">MoP</span><span class="flavor">Era</span><span class="flavor">Forever</span></div>
+        <div class="card-foot"><code>/srt</code></div>
       </article>
-
-      <article class="module-card">
-        <div class="module-top"><h3>Sulphur Meters</h3><span class="badge badge-dev">In dev</span></div>
-        <p>Up to four thin meter windows that dock into a train. Click a bar for the spell breakdown.</p>
-        <div class="module-foot"><code>/smeter</code><span class="flavor">Retail</span><span class="flavor">MoP</span><span class="flavor">Era</span><span class="flavor">Forever</span></div>
+      <article class="card">
+        <div class="card-top"><h3>Sulphur Meters</h3><span class="badge badge-dev">In dev</span></div>
+        <p>Up to four thin meter windows. Drag one onto another and they dock into a train; click any bar for that player's spell breakdown.</p>
+        <div class="card-foot"><code>/smeter</code></div>
       </article>
-
-      <article class="module-card">
-        <div class="module-top"><h3>Sulphur Chat</h3><span class="badge badge-dev">In dev</span></div>
+      <article class="card">
+        <div class="card-top"><h3>Sulphur Chat</h3><span class="badge badge-dev">In dev</span></div>
         <p>Two chat docks, conversation on the left and the system firehose on the right, with routing picked once in first-run setup.</p>
-        <div class="module-foot"><code>/schat</code><span class="flavor">Retail</span><span class="flavor">MoP</span><span class="flavor">Era</span><span class="flavor">Forever</span></div>
+        <div class="card-foot"><code>/schat</code></div>
       </article>
-
-      <article class="module-card">
-        <div class="module-top"><h3>Sulphur Minimap</h3><span class="badge badge-dev">In dev</span></div>
-        <p>A square minimap with zone, spec and professions stacked beneath, plus one bag that collects minimap buttons.</p>
-        <div class="module-foot"><code>/smap</code><span class="flavor">Retail</span><span class="flavor">MoP</span><span class="flavor">Era</span><span class="flavor">Forever</span></div>
+      <article class="card">
+        <div class="card-top"><h3>Sulphur Minimap</h3><span class="badge badge-dev">In dev</span></div>
+        <p>A square minimap with zone, spec and professions stacked beneath, a performance row, plus one bag that collects minimap buttons.</p>
+        <div class="card-foot"><code>/smap</code></div>
       </article>
-
-      <article class="module-card">
-        <div class="module-top"><h3>Sulphur Info Bar</h3><span class="badge badge-dev">In dev</span></div>
+      <article class="card">
+        <div class="card-top"><h3>Sulphur Info Bar</h3><span class="badge badge-dev">In dev</span></div>
         <p>A strip along the top or bottom edge: gold, durability, bag slots, zone, FPS and latency, clock, friends, guild.</p>
-        <div class="module-foot"><code>/sinfo</code><span class="flavor">Retail</span><span class="flavor">MoP</span><span class="flavor">Era</span><span class="flavor">Forever</span></div>
+        <div class="card-foot"><code>/sinfo</code></div>
       </article>
-
-      <article class="module-card">
-        <div class="module-top"><h3>Sulphur XP</h3><span class="badge badge-dev">In dev</span></div>
+      <article class="card">
+        <div class="card-top"><h3>Sulphur XP</h3><span class="badge badge-dev">In dev</span></div>
         <p>One experience bar with completed-quest, incomplete-quest and rested overlays and optional texts.</p>
-        <div class="module-foot"><code>/sxp</code><span class="flavor">Retail</span><span class="flavor">MoP</span><span class="flavor">Era</span><span class="flavor">Forever</span></div>
+        <div class="card-foot"><code>/sxp</code></div>
       </article>
-
-      <article class="module-card">
-        <div class="module-top"><h3>Sulphur HUD</h3><span class="badge badge-dev">In dev</span></div>
+      <article class="card">
+        <div class="card-top"><h3>Sulphur HUD</h3><span class="badge badge-dev">In dev</span></div>
         <p>Decorative bars, wedges and a clean top bar that frame your interface. Always underneath, never eats a click.</p>
-        <div class="module-foot"><code>/shud</code><span class="flavor">Retail</span><span class="flavor">MoP</span><span class="flavor">Era</span><span class="flavor">Forever</span></div>
+        <div class="card-foot"><code>/shud</code></div>
       </article>
-
-      <article class="module-card">
-        <div class="module-top"><h3>Sulphur QoL</h3><span class="badge badge-dev">In dev</span></div>
+      <article class="card">
+        <div class="card-top"><h3>Sulphur QoL</h3><span class="badge badge-dev">In dev</span></div>
         <p>Quick loot, auto repair, sell junk, quest accept, keystone slotting, an item upgrade calculator and more, every switch off by default.</p>
-        <div class="module-foot"><code>/sqol</code><span class="flavor">Retail</span><span class="flavor">MoP</span><span class="flavor">Era</span><span class="flavor">Forever</span></div>
+        <div class="card-foot"><code>/sqol</code></div>
       </article>
-
-      <article class="module-card">
-        <div class="module-top"><h3>Sulphur Bags</h3><span class="badge badge-dev">In dev</span></div>
+      <article class="card">
+        <div class="card-top"><h3>Sulphur Bags</h3><span class="badge badge-dev">In dev</span></div>
         <p>A replacement bag window with flat item boxes and one search, sharing its container with Bank.</p>
-        <div class="module-foot"><code>/sbags</code><span class="flavor">Retail</span><span class="flavor">MoP</span><span class="flavor">Era</span><span class="flavor">Forever</span></div>
+        <div class="card-foot"><code>/sbags</code></div>
       </article>
-
-      <article class="module-card">
-        <div class="module-top"><h3>Sulphur Bank</h3><span class="badge badge-dev">In dev</span></div>
+      <article class="card">
+        <div class="card-top"><h3>Sulphur Bank</h3><span class="badge badge-dev">In dev</span></div>
         <p>Your bank in the same container as Bags, plus a shared-storage window for the guild bank and your alts.</p>
-        <div class="module-foot"><code>/sbank</code><span class="flavor">Retail</span><span class="flavor">MoP</span><span class="flavor">Era</span><span class="flavor">Forever</span></div>
+        <div class="card-foot"><code>/sbank</code></div>
       </article>
-
-      <article class="module-card">
-        <div class="module-top"><h3>Sulphur Mail</h3><span class="badge badge-dev">In dev</span></div>
+      <article class="card">
+        <div class="card-top"><h3>Sulphur Mail</h3><span class="badge badge-dev">In dev</span></div>
         <p>A replacement mailbox window that stays out of the way until you open it.</p>
-        <div class="module-foot"><code>/smail</code><span class="flavor">Retail</span><span class="flavor">MoP</span><span class="flavor">Era</span><span class="flavor">Forever</span></div>
+        <div class="card-foot"><code>/smail</code></div>
       </article>
-
-      <article class="module-card">
-        <div class="module-top"><h3>Sulphur Skins</h3><span class="badge badge-dev">In dev</span></div>
-        <p>57 skin packs for Blizzard's own windows, now with Sulphur header bands and gear-slot boxes. Every pack is off until you pick it.</p>
-        <div class="module-foot"><span class="flavor">Retail</span><span class="flavor">MoP</span><span class="flavor">Era</span><span class="flavor">Forever</span></div>
+      <article class="card">
+        <div class="card-top"><h3>Sulphur Skins</h3><span class="badge badge-dev">In dev</span></div>
+        <p>57 skin packs for Blizzard's own windows, with Sulphur header bands and gear-slot boxes. Every pack is off until you pick it.</p>
+        <div class="card-foot"><span class="chip">Settings &rsaquo; Blizzard Windows</span></div>
       </article>
-
-      <article class="module-card">
-        <div class="module-top"><h3>Sulphur Skyriding</h3><span class="badge badge-dev">In dev</span></div>
+      <article class="card">
+        <div class="card-top"><h3>Sulphur Skyriding</h3><span class="badge badge-dev">In dev</span></div>
         <p>A small gliding HUD: vigor pips, speed, Whirling Surge and Second Wind. Hidden in instances.</p>
-        <div class="module-foot"><code>/ssky</code><span class="flavor">Retail</span></div>
+        <div class="card-foot"><code>/ssky</code><span class="chip">Retail only</span></div>
       </article>
-
-      <article class="module-card">
-        <div class="module-top"><h3>Sulphur Mythic Timer</h3><span class="badge badge-dev">In dev</span></div>
+      <article class="card">
+        <div class="card-top"><h3>Sulphur Mythic Timer</h3><span class="badge badge-dev">In dev</span></div>
         <p>A Mythic+ run display: timer with chest thresholds, enemy forces, deaths and boss splits.</p>
-        <div class="module-foot"><code>/smplus</code><span class="flavor">Retail</span></div>
+        <div class="card-foot"><code>/smplus</code><span class="chip">Retail only</span></div>
       </article>
-
     </div>
-      <h3>New in 0.115&ndash;0.117</h3>
-    <ul>
-      <li>Nameplates show an execute zone under your class's execute threshold, and health colours update on every change.</li>
-      <li>Open preview buttons pop the live Raid Frames, Unit Frames and Nameplates previews out beside <code>/sui</code>.</li>
-      <li>The layout studio has a new disc control panel and real-size handles.</li>
-      <li>HUD Builder cooldown rows show buff time while it is up, then the cooldown.</li>
-      <li>Mirrored action bar pairs, a fully skinned quest tracker and quest log, and a movable themed tooltip.</li>
-      <li>One Wizards page, a cleaner Home page and a minimap performance row.</li>
-      <li>Removed buffs now drop off the aura grid, and chat docks hold their place through a level-up.</li>
-    </ul>
+    <p class="section-foot">Also in the box: a skinned quest tracker and quest log, themed movable tooltips, and preview pop-outs for Raid Frames, Unit Frames and Nameplates beside the settings window.</p>
   </section>
 
-  <section class="block" id="ingame">
+  <section class="block band" id="gra">
     <div class="section-head">
-      <div class="eyebrow">In game · WoW Forever test night, 26 September</div>
-      <h2>Running in the client.</h2>
-      <p class="sub">These are unretouched screenshots from our own test night on the WoW Forever client, on a level 3 character. The concepts below set the direction, and this is how far the build has come. It is still being worked on: some Blizzard art, like the gold option labels and the parchment map, has not been reskinned yet.</p>
+      <div class="eyebrow">Live now &middot; MoP Classic</div>
+      <h2>Sulphur GRA, the guild raid assistant.</h2>
+      <p class="sub">Plan Bloodlust per boss, catch missing consumables on every ready check, track BiS drops and pull timers, and sync it all across the raid automatically.</p>
     </div>
-    <div class="concept-grid">
-      <figure class="concept">
-        <a href="img/ingame/c_char.jpg" target="_blank" rel="noopener"><img src="img/ingame/c_char.jpg" alt="In-game screenshot: Character window" loading="lazy" decoding="async"></a>
-        <figcaption><b>Character window</b> The Character window with the Sulphur skin: flat panels, green-edged gear-slot boxes and a stat column.</figcaption>
-      </figure>
-      <figure class="concept">
-        <a href="img/ingame/c_opts2.jpg" target="_blank" rel="noopener"><img src="img/ingame/c_opts2.jpg" alt="In-game screenshot: Options" loading="lazy" decoding="async"></a>
-        <figcaption><b>Options</b> Blizzard's own Options window in the Sulphur shell: rail, search box and green-accent controls.</figcaption>
-      </figure>
-      <figure class="concept">
-        <a href="img/ingame/c_map.jpg" target="_blank" rel="noopener"><img src="img/ingame/c_map.jpg" alt="In-game screenshot: Map &amp; quest log" loading="lazy" decoding="async"></a>
-        <figcaption><b>Map &amp; quest log</b> The world map and quest log in one skinned window, quests grouped by zone.</figcaption>
-      </figure>
-      <figure class="concept">
-        <a href="img/ingame/np1.jpg" target="_blank" rel="noopener"><img src="img/ingame/np1.jpg" alt="In-game screenshot: Nameplates and XP" loading="lazy" decoding="async"></a>
-        <figcaption><b>Nameplates and XP</b> Sulphur Nameplates on live mobs, with the targeted plate edged in green. Sulphur XP runs across the top with its rested and session texts.</figcaption>
-      </figure>
-      <figure class="concept">
-        <a href="img/ingame/tr1.jpg" target="_blank" rel="noopener"><img src="img/ingame/tr1.jpg" alt="In-game screenshot: Minimap and auras" loading="lazy" decoding="async"></a>
-        <figcaption><b>Minimap and auras</b> Sulphur Minimap with the zone, spec and profession stack and the button row, next to the Sulphur Auras header and grid.</figcaption>
-      </figure>
-      <figure class="concept">
-        <a href="img/ingame/uf1.jpg" target="_blank" rel="noopener"><img src="img/ingame/uf1.jpg" alt="In-game screenshot: Unit frame and cast bar" loading="lazy" decoding="async"></a>
-        <figcaption><b>Unit frame and cast bar</b> The Sulphur Unit Frames player frame with its portrait and the cast bar mid-cast, beside the skinned micro menu.</figcaption>
-      </figure>
+    <div class="grid-4">
+      <div class="card"><span class="card-n">01</span><h3>BiS priority</h3><p>GRA knows your BiS list and its tiers. When an item drops it tells you whether it is your main-spec roll, checked against the item level you already wear.</p></div>
+      <div class="card"><span class="card-n">02</span><h3>Know what to roll on</h3><p>Works with the Gargul loot addon: GRA reads its roll announcements live and pops up a verdict for that exact item, then closes on the award.</p></div>
+      <div class="card"><span class="card-n">03</span><h3>Guild bank, in sync</h3><p>GRA scans the guild bank and shares it over the guild channel, so everyone's Storage window shows the same up-to-date stock.</p></div>
+      <div class="card"><span class="card-n">04</span><h3>Shared member banks</h3><p>Members can share their own bank with the guild too, so the loot helper can point you at the gem or enchant mat someone already holds.</p></div>
+    </div>
+    <p class="section-foot"><a class="btn btn-ghost" href="gra.html">GRA commands &amp; reference &rarr;</a></p>
+  </section>
+
+  <section class="block" id="install">
+    <div class="section-head">
+      <div class="eyebrow">Get started</div>
+      <h2>Up and running in four steps.</h2>
+    </div>
+    <div class="grid-2 steps" style="max-width:900px;margin:0 auto">
+      <div class="card step">
+        <h3>Download</h3>
+        <p>Grab the latest release, v0.117.0, from Wago or CurseForge. Either desktop app installs it and keeps it updated.</p>
+        <div class="dl-pair">
+          <a class="btn btn-primary" href="https://addons.wago.io/addons/sulphurui" target="_blank" rel="noopener">Wago</a>
+          <a class="btn btn-primary" href="https://www.curseforge.com/wow/addons/sulphurui" target="_blank" rel="noopener">CurseForge</a>
+        </div>
+      </div>
+      <div class="card step">
+        <h3>Or install by hand</h3>
+        <p>Unzip the download so that <code>SulphurUI</code> and the module folders (<code>SulphurGRA</code>, <code>SulphurRaidFrames</code>, …) sit directly inside <code>Interface\AddOns</code>. If WoW is running, log out to character select so it picks them up, then check they are enabled in the AddOns list.</p>
+      </div>
+      <div class="card step">
+        <h3>Run setup</h3>
+        <p>Type <code>/sui</code> in game. The first-run Setup Wizard walks you through look, size, modules and layout; every module stays off until you turn it on there.</p>
+      </div>
+      <div class="card step">
+        <h3>Place your frames</h3>
+        <p><code>/sgrid</code> opens the layout studio to drag and snap every window where you want it. <code>/shelp</code> lists every command without leaving the game.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="updates">
+    <div class="section-head">
+      <div class="eyebrow">Updates</div>
+      <h2>New in v0.115 &ndash; v0.117</h2>
+      <p class="sub">The full changelog is in game under <code>/sui</code> &rsaquo; Changelog, and on each release page on Wago and CurseForge.</p>
+    </div>
+    <div class="updates">
+      <div class="card">
+        <h3>Frames &amp; HUD</h3>
+        <ul>
+          <li>Nameplates show an execute zone under your class's execute threshold, and health colours update on every change.</li>
+          <li>Open-preview buttons pop the live Raid Frames, Unit Frames and Nameplates previews out beside <code>/sui</code>.</li>
+          <li>HUD Builder cooldown rows show buff time while it is up, then the cooldown.</li>
+          <li>Mirrored action bar pairs.</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Shell &amp; windows</h3>
+        <ul>
+          <li>The layout studio has a new disc control panel and real-size handles.</li>
+          <li>A fully skinned quest tracker and quest log, and a movable themed tooltip.</li>
+          <li>One Wizards page, a cleaner Home page and a minimap performance row.</li>
+          <li>Removed buffs now drop off the aura grid, and chat docks hold their place through a level-up.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="block band" id="standard">
+    <div class="section-head">
+      <div class="eyebrow">The bar every module clears</div>
+      <h2>Light enough to leave on in a 25-man.</h2>
+      <p class="sub">Every new module is reviewed against the same four rules before it ships.</p>
+    </div>
+    <div class="grid-4">
+      <div class="card"><span class="card-n">01</span><h3>Zero cost unless enabled</h3><p>A switched-off feature registers no events and builds no frames. Hidden means unregistered, not just invisible.</p></div>
+      <div class="card"><span class="card-n">02</span><h3>Opt-in by default</h3><p>New settings ship off, so an update never rearranges your screen without you asking.</p></div>
+      <div class="card"><span class="card-n">03</span><h3>Event-driven</h3><p>No per-frame polling. A timer exists only while the text that needs it is actually on screen.</p></div>
+      <div class="card"><span class="card-n">04</span><h3>Taint-safe</h3><p>Blizzard's protected frames are placed and hidden through secure drivers, never hooked, so no mystery errors mid-pull.</p></div>
     </div>
   </section>
 
   <section class="block" id="concepts">
     <div class="section-head">
-      <div class="eyebrow">Concept art · the Forever look</div>
+      <div class="eyebrow">Concept art</div>
       <h2>Where the look is heading.</h2>
-      <p class="sub">These are design mockups, not in-game captures. They set the direction for the Sulphur skin packs: dark flat panels, one green accent, hairline borders. The Great Vault and Character windows already ship in this style, and the rest follow.</p>
+      <p class="sub">Design mockups, not in-game captures. They set the direction for the Sulphur skin packs: dark flat panels, one green accent, hairline borders. The Great Vault and Character windows already ship in this style, and the rest follow.</p>
     </div>
-    <div class="concept-grid">
+    <div class="grid-2">
       <figure class="concept concept-wide">
         <a href="img/concepts/great-vault.png" target="_blank" rel="noopener"><img src="img/concepts/great-vault.png" alt="Concept mockup: Great Vault window in the Sulphur style" loading="lazy" decoding="async"></a>
-        <figcaption><b>Great Vault</b> The weekly vault, redrawn: one row per activity, reward cards on flat Sulphur boxes. Shipped as a skin pack this week.</figcaption>
+        <figcaption><b>Great Vault</b> The weekly vault, redrawn: one row per activity, reward cards on flat Sulphur boxes. Shipped as a skin pack.</figcaption>
       </figure>
       <figure class="concept">
         <a href="img/concepts/interface-settings.png" target="_blank" rel="noopener"><img src="img/concepts/interface-settings.png" alt="Concept mockup: Interface settings window in the Sulphur style" loading="lazy" decoding="async"></a>
         <figcaption><b>Interface settings</b> Blizzard's settings window in the Sulphur shell: rail, search, flat controls and one accent colour.</figcaption>
       </figure>
       <figure class="concept">
-        <a href="img/concepts/map-questlog.webp" target="_blank" rel="noopener"><img src="img/concepts/map-questlog.webp" alt="Concept mockup: Map &amp; quest log window in the Sulphur style" loading="lazy" decoding="async"></a>
+        <a href="img/concepts/map-questlog.webp" target="_blank" rel="noopener"><img src="img/concepts/map-questlog.webp" alt="Concept mockup: Map and quest log window in the Sulphur style" loading="lazy" decoding="async"></a>
         <figcaption><b>Map &amp; quest log</b> Map and quest log in one window, quests grouped by zone with objectives inline.</figcaption>
       </figure>
       <figure class="concept">
@@ -595,56 +375,30 @@
     </div>
   </section>
 
-  <section class="block standard">
+  <section class="block cta" id="feedback">
     <div class="section-head">
-      <div class="eyebrow">The bar every module clears</div>
-      <h2>Light enough to leave on in a 25-man.</h2>
-      <p class="sub">Every new module is reviewed against the same four rules before it ships.</p>
+      <div class="eyebrow">Feedback</div>
+      <h2>Found a bug? Got an idea?</h2>
+      <p class="sub">Send a bug report with your Debugger log (<code>/sui</code> &rsaquo; Debugger &rsaquo; Copy), or a suggestion, straight to Sulphur_Dev.</p>
     </div>
-    <div class="standard-grid">
-      <div class="standard-item">
-        <span class="std-n">01</span>
-        <h3>Zero cost unless enabled</h3>
-        <p>A switched-off feature registers no events and builds no frames. Hidden means unregistered, not just invisible.</p>
-      </div>
-      <div class="standard-item">
-        <span class="std-n">02</span>
-        <h3>Opt-in by default</h3>
-        <p>New settings ship off, so an update never rearranges your screen without you asking.</p>
-      </div>
-      <div class="standard-item">
-        <span class="std-n">03</span>
-        <h3>Event-driven</h3>
-        <p>No per-frame polling. A timer exists only while the text that needs it is actually on screen.</p>
-      </div>
-      <div class="standard-item">
-        <span class="std-n">04</span>
-        <h3>Taint-safe</h3>
-        <p>Blizzard's protected frames are placed and hidden through secure drivers, never hooked, so no mystery errors mid-pull.</p>
-      </div>
-    </div>
-  </section>
-
-  <section class="block report-cta">
-    <h2>Found a bug? Got an idea?</h2>
-    <p class="sub">Send a bug report with your Debugger log, or a suggestion, straight to Sulphur_Dev.</p>
-    <a class="btn btn-primary" href="report.html">Report a bug / suggest</a>
+    <a class="btn btn-primary" href="report.html">Report a bug or suggest</a>
   </section>
 
   <footer class="sitefoot">
     <div class="foot-cols">
       <div class="foot-brand">
-        <img src="sui-mark-96.png" alt="">
-        <div><b>Sulphur Addons</b><p>SulphurUI, built by Sulphur_Dev. Not affiliated with Blizzard Entertainment.</p></div>
+        <img src="sui-mark-96.png" alt="" width="40" height="40">
+        <div><b>Sulphur Addons</b><p>SulphurUI, built by Sulphur_Dev.</p></div>
       </div>
-      <div class="foot-col"><h4>Get it</h4><a href="https://addons.wago.io/addons/sulphurui" target="_blank" rel="noopener">SulphurUI on Wago</a><a href="https://www.curseforge.com/wow/addons/sulphurui" target="_blank" rel="noopener">SulphurUI on CurseForge</a><a href="gra.html">Install &amp; commands</a><a href="https://github.com/sulphurthreads/sulphur-addons" target="_blank" rel="noopener">GitHub</a></div>
-      <div class="foot-col"><h4>Explore</h4><a href="index.html#modules">Modules</a><a href="gra.html">Commands</a><a href="report.html">Report a bug / suggest</a></div>
-      <div class="foot-col"><h4>Support</h4><a href="https://buymeacoffee.com/sulphurworks" target="_blank" rel="noopener">&#9749; Buy me a coffee</a></div>
+      <div class="foot-col"><h4>Get it</h4><a href="https://addons.wago.io/addons/sulphurui" target="_blank" rel="noopener">Wago</a><a href="https://www.curseforge.com/wow/addons/sulphurui" target="_blank" rel="noopener">CurseForge</a><a href="#install">Install guide</a></div>
+      <div class="foot-col"><h4>Explore</h4><a href="#modules">Modules</a><a href="#screenshots">Screenshots</a><a href="gra.html">GRA commands</a><a href="#updates">Updates</a></div>
+      <div class="foot-col"><h4>Community</h4><a href="report.html">Report a bug / suggest</a><a href="https://github.com/sulphurthreads/sulphur-addons" target="_blank" rel="noopener">GitHub</a><a href="https://buymeacoffee.com/sulphurworks" target="_blank" rel="noopener">&#9749; Buy me a coffee</a></div>
     </div>
+    <p class="foot-note">Not affiliated with Blizzard Entertainment. World of Warcraft is a trademark of Blizzard Entertainment, Inc.</p>
   </footer>
 
-</div>
+</main>
 
-<script src="script.js?v=23"></script>
+<script src="script.js?v=24" defer></script>
 </body>
 </html>
