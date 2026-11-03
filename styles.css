@@ -450,3 +450,11 @@ table.cmd-table td:not(:first-child) code { white-space: normal; overflow-wrap: 
   html { scroll-behavior: auto; }
   *, *::before, *::after { transition: none !important; }
 }
+
+/* Testing-phase notice (WoW Forever launch, 2026-11) */
+.test-notice { display: flex; gap: var(--s-3, 16px); align-items: flex-start; margin: var(--s-4, 24px) 0; padding: var(--s-3, 16px) var(--s-4, 24px); border: 1px solid var(--accent); border-radius: 8px; background: var(--accent-wash); }
+.test-notice h2 { margin: 0 0 8px; font-size: 1.25rem; color: var(--ink); }
+.test-notice p { margin: 0 0 10px; color: var(--ink-soft); }
+.test-notice .btn { margin-top: 4px; }
+.test-notice-tag { flex: none; padding: 4px 10px; border-radius: 999px; background: var(--accent); color: #0b0b0a; font-weight: 700; font-size: .8rem; text-transform: uppercase; letter-spacing: .06em; }
+@media (max-width: 640px) { .test-notice { flex-direction: column; padding: 16px; } }
