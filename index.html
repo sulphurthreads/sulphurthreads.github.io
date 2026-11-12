@@ -110,13 +110,13 @@
   <section class="block" id="modules">
     <div class="section-head">
       <div class="eyebrow">The suite &middot; v0.120.24</div>
-      <h2>Twenty-eight modules. Turn on only what you use.</h2>
+      <h2>Thirty-one modules. Turn on only what you use.</h2>
       <p class="sub">Each module is its own addon on the SulphurUI core, so they share one look, one settings panel, one first-run setup and one snap-and-dock layout grid. Every module runs on all four clients unless marked otherwise. Sulphur GRA is live; the rest is built and waiting on its in-game pass.</p>
     </div>
     <div class="grid-4">
       <a class="card is-live" href="gra.html">
         <div class="card-top"><h3>Sulphur GRA</h3><span class="badge badge-live">Live</span></div>
-        <p>Guild Raid Assistant: Hero Plan lust calls, pre-raid and ready checks, BiS tracking, guild-bank scan and raid-wide sync. Loot popup: in development, paused for now.</p>
+        <p>Guild Raid Assistant: Hero Plan lust calls, pre-raid and ready checks, BiS lists imported from a Wowhead gear planner link with a roll prompt when one drops, guild-bank scan and raid-wide sync.</p>
         <div class="card-foot"><code>/sgra</code><span class="chip">MoP Classic</span></div>
       </a>
       <article class="card">
@@ -136,23 +136,18 @@
       </article>
       <article class="card">
         <div class="card-top"><h3>Sulphur Action Bars</h3><span class="badge badge-dev">In dev</span></div>
-        <p>Eight bars on Blizzard's own buttons so cooldowns, charges and range stay exact. Secure paging, a keybind mode, mirrored pairs, and layout profiles that remember spells.</p>
+        <p>Eight bars on Blizzard's own buttons so cooldowns, charges and range stay exact. Secure paging, a keybind mode, mirrored pairs, and layout profiles that remember spells. Paladins can highlight the blessings their target is missing.</p>
         <div class="card-foot"><code>/sbars</code><code>/skb</code></div>
       </article>
       <article class="card">
         <div class="card-top"><h3>Sulphur HUD Builder</h3><span class="badge badge-dev">In dev</span></div>
-        <p>Build a HUD one row at a time per class and spec: health, power, pips, cast bar, cooldowns, auras, missing buffs. Cooldown rows track their own buff automatically.</p>
+        <p>Build a HUD one row at a time per class and spec: health, power, pips, cast bar, cooldowns, auras, missing buffs. Cooldown rows track their own buff automatically, and procs can be added straight from the buffs on you.</p>
         <div class="card-foot"><code>/shb</code></div>
       </article>
       <article class="card">
         <div class="card-top"><h3>Sulphur Resource Bars</h3><span class="badge badge-dev">In dev</span></div>
         <p>A player-centred stack of class pips, health, power and your cast bar, with secret-safe text and engine-smoothed bars.</p>
         <div class="card-foot"><code>/sres</code></div>
-      </article>
-      <article class="card">
-        <div class="card-top"><h3>Sulphur Class HUD</h3><span class="badge badge-dev">In dev</span></div>
-        <p>Three icon rows for the cooldowns, utility and procs you choose, including trinkets that show proc, then cooldown, on one icon.</p>
-        <div class="card-foot"><code>/schud</code></div>
       </article>
       <article class="card">
         <div class="card-top"><h3>Sulphur Cooldown Manager</h3><span class="badge badge-dev">In dev</span></div>
@@ -181,7 +176,7 @@
       </article>
       <article class="card">
         <div class="card-top"><h3>Sulphur Merchant</h3><span class="badge badge-dev">In dev</span></div>
-        <p>A Sulphur vendor window: paged items, a Buyback tab, shift-click for a stack, confirms on costly buys, sell-junk and repair buttons.</p>
+        <p>A Sulphur vendor window: paged items, a Buyback tab, shift-click for a stack, confirms on costly buys, sell-junk and repair buttons. Locked items are never auto-sold.</p>
         <div class="card-foot"><code>/smerchant</code></div>
       </article>
       <article class="card">
@@ -226,12 +221,12 @@
       </article>
       <article class="card">
         <div class="card-top"><h3>Sulphur Bags</h3><span class="badge badge-dev">In dev</span></div>
-        <p>A replacement bag window with flat item boxes and one search, sharing its container with Bank.</p>
+        <p>A replacement bag window with flat item boxes and one search, sharing its container with Bank. Alt-click an item to lock it, and tracked currencies sit beside your gold.</p>
         <div class="card-foot"><code>/sbags</code></div>
       </article>
       <article class="card">
         <div class="card-top"><h3>Sulphur Bank</h3><span class="badge badge-dev">In dev</span></div>
-        <p>Your bank in the same container as Bags, plus a shared-storage window for the guild bank and your alts.</p>
+        <p>Your bank in the same container as Bags, plus a shared-storage window for the guild bank and your alts. Buy bank slots and add bank bags from the bank window.</p>
         <div class="card-foot"><code>/sbank</code></div>
       </article>
       <article class="card">
@@ -254,6 +249,26 @@
         <p>A Mythic+ run display: timer with chest thresholds, enemy forces, deaths and boss splits.</p>
         <div class="card-foot"><code>/smplus</code><span class="chip">Retail only</span></div>
       </article>
+      <article class="card">
+        <div class="card-top"><h3>Sulphur Training</h3><span class="badge badge-dev">In dev</span></div>
+        <p>Every trainable spell for every class with its level and cost, including your home-city reputation discount. A Professions view lists every recipe with its materials and where the pattern drops.</p>
+        <div class="card-foot"><code>/straining</code><span class="chip">WoW Forever, Classic Era</span></div>
+      </article>
+      <article class="card">
+        <div class="card-top"><h3>Sulphur Dungeons</h3><span class="badge badge-dev">In dev</span></div>
+        <p>A 5-man dungeon guide: level ranges coloured against yours, entrance locations, and each dungeon's loot and quests.</p>
+        <div class="card-foot"><code>/sdungeon</code><span class="chip">WoW Forever, Classic Era</span></div>
+      </article>
+      <article class="card">
+        <div class="card-top"><h3>Sulphur Map Icons</h3><span class="badge badge-dev">In dev</span></div>
+        <p>World-map pins for your faction's flight points and for dungeon and raid entrances, with one filter per category and a map button that hides them all.</p>
+        <div class="card-foot"><span class="chip">Settings &rsaquo; Map Icons</span></div>
+      </article>
+      <article class="card">
+        <div class="card-top"><h3>Sulphur Stats</h3><span class="badge badge-dev">In dev</span></div>
+        <p>Fun lifetime numbers for each character and across your account, counted quietly and shown in one window when you open it.</p>
+        <div class="card-foot"><code>/sstats</code></div>
+      </article>
     </div>
     <p class="section-foot">Also in the box: a skinned quest tracker and quest log, themed movable tooltips, and preview pop-outs for Raid Frames, Unit Frames and Nameplates beside the settings window.</p>
   </section>
@@ -265,8 +280,8 @@
       <p class="sub">Plan Bloodlust per boss, catch missing consumables on every ready check, track BiS drops and pull timers, and sync it all across the raid automatically.</p>
     </div>
     <div class="grid-4">
-      <div class="card"><span class="card-n">01</span><h3>BiS priority</h3><p>GRA knows your BiS list and its tiers. When an item drops it tells you whether it is your main-spec roll, checked against the item level you already wear.</p></div>
-      <div class="card"><span class="card-n">02</span><h3>Know what to roll on</h3><p><strong>In development, paused for now.</strong> Works with the Gargul loot addon: GRA reads its roll announcements live and pops up a verdict for that exact item, then closes on the award.</p></div>
+      <div class="card"><span class="card-n">01</span><h3>Your BiS, from Wowhead</h3><p>Paste a Wowhead gear planner link on the BiS page (<code>/sbis</code>). Keep one named list per spec and tier, each item showing the boss and instance it drops from.</p></div>
+      <div class="card"><span class="card-n">02</span><h3>Know what to roll on</h3><p>When an item from one of your lists comes up in a loot roll or the loot window and you don't own it yet, a BiS popup and a chat line tell you to roll.</p></div>
       <div class="card"><span class="card-n">03</span><h3>Guild bank, in sync</h3><p>GRA scans the guild bank and shares it over the guild channel, so everyone's Storage window shows the same up-to-date stock.</p></div>
       <div class="card"><span class="card-n">04</span><h3>Shared member banks</h3><p>Members can share their own bank with the guild too, so the loot helper (in development, paused for now) can point you at the gem or enchant mat someone already holds.</p></div>
     </div>
